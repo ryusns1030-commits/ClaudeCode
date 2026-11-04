@@ -1,0 +1,10 @@
+from lib import *
+p=Page("PBQ7PZCrhXmRYbTb")
+p.status()
+p.text("日記",54,20,200,size=26,bold=True)
+p.rect(250,135,120,120,"primarySoft",60); p.icon("nikki",280,165,60,"primary")
+p.text("まだ日記がありません",290+0*0+100,20,350,size=20,bold=True,align="center")
+p.text("写真やできごとを残しておくと、あとから見返したり、病院で様子を伝えたりできます。",426,40,310,size=15,c="text2",align="center",lh=1.6)
+p.rect(510,95,200,52,"primary",16); p.text("日記を書く",526,95,200,size=17,c="#FFFFFF",bold=True,align="center")
+p.tabbar(2)
+emit(p,"p26")

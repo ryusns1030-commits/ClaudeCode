@@ -1,0 +1,27 @@
+from lib import *
+p=Page("PBHgXpXMMfZ90WgX")
+p.status(); p.pushnav("プロフィール","病院・通院","＋追加")
+p.text("かかりつけ",100,20,200,size=15,c="text2",bold=True)
+p.rect(126,16,358,170,"surface",18)
+p.icon("hosp",144,32,26,"primary"); p.text("さくら動物病院",144,68,200,size=18,bold=True)
+p.badge("かかりつけ",146,272,86,"sage")
+p.text("電話　03-1234-5678",182,32,320,size=15)
+p.text("診療　9:00〜18:00（水曜休み）",206,32,320,size=15)
+p.rect(236,32,156,40,"primarySoft",20); p.text("電話をかける",246.5,32,156,size=15,c="primary",bold=True,align="center")
+p.rect(236,200,158,40,"surface2",20); p.text("地図を開く",246.5,200,158,size=15,bold=True,align="center")
+p.text("次の通院予定",312,20,200,size=15,c="text2",bold=True)
+p.rect(338,16,358,84,"blueSoft",18)
+p.icon("cal",356,32,24,"blue")
+p.text("11月15日（土）10:30",354,68,290,size=17,c="blue",bold=True)
+p.text("血液検査の再検査 ・ さくら動物病院",380,68,290,size=14,c="blue")
+p.text("通院の記録",446,20,200,size=15,c="text2",bold=True)
+p.rect(472,16,358,186,"surface",18)
+items=[("11月1日","定期健診・血液検査"),("10月2日","皮膚の診察"),("8月30日","混合ワクチン")]
+for i,(d,t) in enumerate(items):
+  y=488+i*58
+  p.text(d,y+6,32,90,size=15,c="text2",bold=True)
+  p.text(t,y+6,122,220,size=16)
+  p.text("›",y+3,346,16,size=20,c="text2")
+  if i<2: p.hline(y+50,32,326)
+p.tabbar(3)
+emit(p,"p20")

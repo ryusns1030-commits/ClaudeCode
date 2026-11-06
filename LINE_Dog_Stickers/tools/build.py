@@ -101,12 +101,27 @@ def text_layer(text: str, color: str, size: int, rot: float) -> Image.Image:
     pad = outer + 20
     bbox = ImageDraw.Draw(Image.new("L", (1, 1))).textbbox((0, 0), text, font=font)
     w, h = bbox[2] - bbox[0] + pad * 2, bbox[3] - bbox[1] + pad * 2
-    layer = Image.new("RGBA", (w, h), (0, 0, 0, 0))
-    dr = ImageDraw.Draw(layer)
     xy = (pad - bbox[0], pad - bbox[1])
-    dr.text(xy, text, font=font, fill=OUTLINE + (255,), stroke_width=outer, stroke_fill=OUTLINE + (255,))
-    dr.text(xy, text, font=font, fill=(255, 255, 255, 255), stroke_width=inner, stroke_fill=(255, 255, 255, 255))
-    dr.text(xy, text, font=font, fill=color)
+    # glyph mask, then borders built with distance transforms
+    # (PIL's stroke_width leaves artefacts inside small counters such as 解)
+    gm = Image.new("L", (w, h), 0)
+    ImageDraw.Draw(gm).text(xy, text, font=font, fill=255)
+    g = np.asarray(gm).astype(np.float32) / 255
+    dist_g = ndimage.distance_transform_edt(g < 0.5)
+    white = np.clip(inner - dist_g + 0.5, 0, 1)
+    white_solid = ndimage.binary_fill_holes(white > 0.5)  # fill counters with white
+    white = np.maximum(white, white_solid.astype(np.float32))
+    dist_w = ndimage.distance_transform_edt(~white_solid)
+    brown = np.clip((outer - inner) - dist_w + 0.5, 0, 1)
+    brown = np.maximum(brown, white)
+
+    col = np.array(Image.new("RGB", (1, 1), color).getpixel((0, 0)), np.float32)
+    rgb = np.empty((h, w, 3), np.float32)
+    rgb[:] = np.array(OUTLINE, np.float32)
+    wa = (white / np.clip(brown, 1e-3, 1))[..., None]
+    rgb = rgb * (1 - wa) + 255 * wa
+    rgb = rgb * (1 - g[..., None]) + col * g[..., None]
+    layer = Image.fromarray(np.dstack([rgb, brown * 255]).clip(0, 255).astype(np.uint8), "RGBA")
     if rot:
         layer = layer.rotate(rot, resample=Image.BICUBIC, expand=True)
     return crop_alpha(layer)

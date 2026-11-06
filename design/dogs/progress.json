@@ -1,4 +1,21 @@
-{"files":{"01":{"design":"DAHaIyWVjzg","url":"https://www.canva.com/d/MZFR8TsOzY4h3sH","status":"done"},
-"02":{"design":"DAHaI8frqc0","url":"https://www.canva.com/d/ZN1ej6vkgGC43cI","status":"done"}},
-"style_ref":"MAHaIxMRpd4",
-"notes":"white/pale coats: prompt bg 薄いグレー. pipeline: gen normal(ref style_ref) -> gen happy(ref normal) -> remove-background -> fitops.py (uses 200px preview alpha) -> insert_fill -> commit -> export png transparent 1024 -> dl.py -> qa_sheet.py"}
+{
+"files": {
+"01": {
+"design": "DAHaIyWVjzg",
+"url": "https://www.canva.com/d/MZFR8TsOzY4h3sH",
+"status": "done"
+},
+"02": {
+"design": "DAHaI8frqc0",
+"url": "https://www.canva.com/d/ZN1ej6vkgGC43cI",
+"status": "done"
+},
+"03": {
+"design": "DAHaJN6i1Cg",
+"url": "https://www.canva.com/d/CplNNUVTs107OQR",
+"status": "in_progress"
+}
+},
+"style_ref": "MAHaIxMRpd4",
+"notes": "white/pale coats: prompt bg 薄いグレー. pipeline: gen normal(ref style_ref) -> gen happy(ref normal) -> remove-background -> fitops.py (uses 200px preview alpha) -> insert_fill -> commit -> export png transparent 1024 -> dl.py -> qa_sheet.py"
+}

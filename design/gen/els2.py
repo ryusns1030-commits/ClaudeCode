@@ -1,7 +1,7 @@
 import json,sys
 j=json.load(open(sys.argv[1]))
 for pg in j['design_content']['pages']:
-  print('=== ',pg['id'],pg['title'])
+  print('=== ',pg['id'],pg.get('title'))
   for e in pg['elements']:
     if e['type']=='text':
       t=''.join(r['characters'] for r in e['textRegions']).replace('\n','⏎'); fm=e['textRegions'][0]['formatting']

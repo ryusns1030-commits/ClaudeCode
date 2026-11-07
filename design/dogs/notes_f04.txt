@@ -2,3 +2,4 @@
 TODO bg 048n MAHaJmzz8lc; poll 047h job
 050n job pending (submitted)
 053 n done(placed). TARGETS: 059 066 067 070 071 076 081 086 094 096 131 ; HOLD 129
+STOPPED by user 2026-11-07. 059 n/h generated (media in ledger, pending_f04b.txt) not placed. 066n job submitted, not collected.

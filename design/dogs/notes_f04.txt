@@ -1,3 +1,4 @@
 047: ビション(019)と外見が近い
 TODO bg 048n MAHaJmzz8lc; poll 047h job
 050n job pending (submitted)
+053 n done(placed). TARGETS: 059 066 067 070 071 076 081 086 094 096 131 ; HOLD 129

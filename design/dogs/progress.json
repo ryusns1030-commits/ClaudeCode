@@ -17,10 +17,11 @@
 },
 "04": {
 "design": "DAHaJen1Ie8",
-"url": "https://canva.link/34lrzf4sq75b5uw",
-"status": "created_blank"
+"url": "https://www.canva.com/d/Y7aWCSgw7dKVe-s",
+"status": "in_progress: 046-052 done, 053n kept; targets pages 27-28,31-50"
 }
 },
 "style_ref": "MAHaIxMRpd4",
-"notes": "white/pale coats: prompt bg 薄いグレー. pipeline: gen normal(ref style_ref) -> gen happy(ref normal) -> remove-background -> fitops.py (uses 200px preview alpha) -> insert_fill -> commit -> export png transparent 1024 -> dl.py -> qa_sheet.py"
+"notes": "white/pale coats: prompt bg 薄いグレー. pipeline: gen normal(ref style_ref) -> gen happy(ref normal) -> remove-background -> fitops.py (uses 200px preview alpha) -> insert_fill -> commit -> export png transparent 1024 -> dl.py -> qa_sheet.py",
+"scope_2026_11_07": "targets 059,066,067,070,071,076,081,086,094,096,131; hold 129; shared 028/065/121->001, 107->011; others 053-150 future"
 }

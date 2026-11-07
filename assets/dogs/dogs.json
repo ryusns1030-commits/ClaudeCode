@@ -1,1955 +1,1505 @@
 {
- "version": 1,
- "note": "IDは固定。ready=true は承認・最終QA合格後のみ。",
+ "version": 2,
+ "note": "IDは固定。imageRef=表示に使う画像のID（共通素材は参照先）。ready=trueのみ表示可。",
  "breeds": [
   {
    "id": "001",
    "key": "toy_poodle",
    "nameJa": "トイ・プードル",
+   "category": "制作済み",
+   "imageRef": "001",
    "normal": "assets/dogs/dog_001_normal.png",
    "happy": "assets/dogs/dog_001_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_01",
-   "pages": [
-    1,
-    2
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "002",
    "key": "chihuahua",
    "nameJa": "チワワ",
+   "category": "制作済み",
+   "imageRef": "002",
    "normal": "assets/dogs/dog_002_normal.png",
    "happy": "assets/dogs/dog_002_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_01",
-   "pages": [
-    3,
-    4
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "003",
    "key": "miniature_dachshund",
    "nameJa": "ミニチュア・ダックスフンド",
+   "category": "制作済み",
+   "imageRef": "003",
    "normal": "assets/dogs/dog_003_normal.png",
    "happy": "assets/dogs/dog_003_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_01",
-   "pages": [
-    5,
-    6
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "004",
    "key": "pomeranian",
    "nameJa": "ポメラニアン",
+   "category": "制作済み",
+   "imageRef": "004",
    "normal": "assets/dogs/dog_004_normal.png",
    "happy": "assets/dogs/dog_004_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_01",
-   "pages": [
-    7,
-    8
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "005",
    "key": "shiba",
    "nameJa": "柴",
+   "category": "制作済み",
+   "imageRef": "005",
    "normal": "assets/dogs/dog_005_normal.png",
    "happy": "assets/dogs/dog_005_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_01",
-   "pages": [
-    9,
-    10
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "006",
    "key": "miniature_schnauzer",
    "nameJa": "ミニチュア・シュナウザー",
+   "category": "制作済み",
+   "imageRef": "006",
    "normal": "assets/dogs/dog_006_normal.png",
    "happy": "assets/dogs/dog_006_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_01",
-   "pages": [
-    11,
-    12
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "007",
    "key": "yorkshire_terrier",
    "nameJa": "ヨークシャー・テリア",
+   "category": "制作済み",
+   "imageRef": "007",
    "normal": "assets/dogs/dog_007_normal.png",
    "happy": "assets/dogs/dog_007_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_01",
-   "pages": [
-    13,
-    14
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "008",
    "key": "french_bulldog",
    "nameJa": "フレンチ・ブルドッグ",
+   "category": "制作済み",
+   "imageRef": "008",
    "normal": "assets/dogs/dog_008_normal.png",
    "happy": "assets/dogs/dog_008_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_01",
-   "pages": [
-    15,
-    16
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "009",
    "key": "maltese",
    "nameJa": "マルチーズ",
+   "category": "制作済み",
+   "imageRef": "009",
    "normal": "assets/dogs/dog_009_normal.png",
    "happy": "assets/dogs/dog_009_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_01",
-   "pages": [
-    17,
-    18
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "010",
    "key": "shih_tzu",
    "nameJa": "シー・ズー",
+   "category": "制作済み",
+   "imageRef": "010",
    "normal": "assets/dogs/dog_010_normal.png",
    "happy": "assets/dogs/dog_010_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_01",
-   "pages": [
-    19,
-    20
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "011",
    "key": "golden_retriever",
    "nameJa": "ゴールデン・レトリーバー",
+   "category": "制作済み",
+   "imageRef": "011",
    "normal": "assets/dogs/dog_011_normal.png",
    "happy": "assets/dogs/dog_011_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_01",
-   "pages": [
-    21,
-    22
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "012",
    "key": "papillon",
    "nameJa": "パピヨン",
+   "category": "制作済み",
+   "imageRef": "012",
    "normal": "assets/dogs/dog_012_normal.png",
    "happy": "assets/dogs/dog_012_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_01",
-   "pages": [
-    23,
-    24
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "013",
    "key": "labrador_retriever",
    "nameJa": "ラブラドール・レトリーバー",
+   "category": "制作済み",
+   "imageRef": "013",
    "normal": "assets/dogs/dog_013_normal.png",
    "happy": "assets/dogs/dog_013_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_01",
-   "pages": [
-    25,
-    26
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "014",
    "key": "pembroke_welsh_corgi",
    "nameJa": "ウェルシュ・コーギー・ペンブローク",
+   "category": "制作済み",
+   "imageRef": "014",
    "normal": "assets/dogs/dog_014_normal.png",
    "happy": "assets/dogs/dog_014_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_01",
-   "pages": [
-    27,
-    28
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "015",
    "key": "jack_russell_terrier",
    "nameJa": "ジャック・ラッセル・テリア",
+   "category": "制作済み",
+   "imageRef": "015",
    "normal": "assets/dogs/dog_015_normal.png",
    "happy": "assets/dogs/dog_015_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_01",
-   "pages": [
-    29,
-    30
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "016",
    "key": "cavalier_king_charles_spaniel",
    "nameJa": "キャバリア・キング・チャールズ・スパニエル",
+   "category": "制作済み",
+   "imageRef": "016",
    "normal": "assets/dogs/dog_016_normal.png",
    "happy": "assets/dogs/dog_016_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_02",
-   "pages": [
-    1,
-    2
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "017",
    "key": "miniature_pinscher",
    "nameJa": "ミニチュア・ピンシャー",
+   "category": "制作済み",
+   "imageRef": "017",
    "normal": "assets/dogs/dog_017_normal.png",
    "happy": "assets/dogs/dog_017_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_02",
-   "pages": [
-    3,
-    4
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "018",
    "key": "pug",
    "nameJa": "パグ",
+   "category": "制作済み",
+   "imageRef": "018",
    "normal": "assets/dogs/dog_018_normal.png",
    "happy": "assets/dogs/dog_018_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_02",
-   "pages": [
-    5,
-    6
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "019",
    "key": "bichon_frise",
    "nameJa": "ビション・フリーゼ",
+   "category": "制作済み",
+   "imageRef": "019",
    "normal": "assets/dogs/dog_019_normal.png",
    "happy": "assets/dogs/dog_019_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_02",
-   "pages": [
-    7,
-    8
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "020",
    "key": "border_collie",
    "nameJa": "ボーダー・コリー",
+   "category": "制作済み",
+   "imageRef": "020",
    "normal": "assets/dogs/dog_020_normal.png",
    "happy": "assets/dogs/dog_020_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_02",
-   "pages": [
-    9,
-    10
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "021",
    "key": "kaninchen_dachshund",
    "nameJa": "カニーンヘン・ダックスフンド",
+   "category": "制作済み",
+   "imageRef": "021",
    "normal": "assets/dogs/dog_021_normal.png",
    "happy": "assets/dogs/dog_021_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_02",
-   "pages": [
-    11,
-    12
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "022",
    "key": "italian_greyhound",
    "nameJa": "イタリアン・グレーハウンド",
+   "category": "制作済み",
+   "imageRef": "022",
    "normal": "assets/dogs/dog_022_normal.png",
    "happy": "assets/dogs/dog_022_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_02",
-   "pages": [
-    13,
-    14
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "023",
    "key": "pekingese",
    "nameJa": "ペキニーズ",
+   "category": "制作済み",
+   "imageRef": "023",
    "normal": "assets/dogs/dog_023_normal.png",
    "happy": "assets/dogs/dog_023_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_02",
-   "pages": [
-    15,
-    16
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "024",
    "key": "beagle",
    "nameJa": "ビーグル",
+   "category": "制作済み",
+   "imageRef": "024",
    "normal": "assets/dogs/dog_024_normal.png",
    "happy": "assets/dogs/dog_024_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_02",
-   "pages": [
-    17,
-    18
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "025",
    "key": "japanese_spitz",
    "nameJa": "日本スピッツ",
+   "category": "制作済み",
+   "imageRef": "025",
    "normal": "assets/dogs/dog_025_normal.png",
    "happy": "assets/dogs/dog_025_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_02",
-   "pages": [
-    19,
-    20
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "026",
    "key": "japanese_chin",
    "nameJa": "狆",
+   "category": "制作済み",
+   "imageRef": "026",
    "normal": "assets/dogs/dog_026_normal.png",
    "happy": "assets/dogs/dog_026_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_02",
-   "pages": [
-    21,
-    22
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "027",
    "key": "boston_terrier",
    "nameJa": "ボストン・テリア",
+   "category": "制作済み",
+   "imageRef": "027",
    "normal": "assets/dogs/dog_027_normal.png",
    "happy": "assets/dogs/dog_027_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_02",
-   "pages": [
-    23,
-    24
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "028",
    "key": "miniature_poodle",
    "nameJa": "ミニチュア・プードル",
-   "normal": "assets/dogs/dog_028_normal.png",
-   "happy": "assets/dogs/dog_028_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_02",
-   "pages": [
-    25,
-    26
-   ],
-   "ready": false
+   "category": "共通素材を使用",
+   "imageRef": "001",
+   "normal": "assets/dogs/dog_001_normal.png",
+   "happy": "assets/dogs/dog_001_happy.png",
+   "ready": true
   },
   {
    "id": "029",
    "key": "west_highland_white_terrier",
    "nameJa": "ウエスト・ハイランド・ホワイト・テリア",
+   "category": "制作済み",
+   "imageRef": "029",
    "normal": "assets/dogs/dog_029_normal.png",
    "happy": "assets/dogs/dog_029_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_02",
-   "pages": [
-    27,
-    28
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "030",
    "key": "shetland_sheepdog",
    "nameJa": "シェットランド・シープドッグ",
+   "category": "制作済み",
+   "imageRef": "030",
    "normal": "assets/dogs/dog_030_normal.png",
    "happy": "assets/dogs/dog_030_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_02",
-   "pages": [
-    29,
-    30
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "031",
    "key": "standard_dachshund",
    "nameJa": "スタンダード・ダックスフンド",
+   "category": "制作済み",
+   "imageRef": "031",
    "normal": "assets/dogs/dog_031_normal.png",
    "happy": "assets/dogs/dog_031_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_03",
-   "pages": [
-    1,
-    2
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "032",
    "key": "brussels_griffon",
    "nameJa": "ブリュッセル・グリフォン",
+   "category": "制作済み",
+   "imageRef": "032",
    "normal": "assets/dogs/dog_032_normal.png",
    "happy": "assets/dogs/dog_032_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_03",
-   "pages": [
-    3,
-    4
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "033",
    "key": "petit_brabancon",
    "nameJa": "プチ・ブラバンソン",
+   "category": "制作済み",
+   "imageRef": "033",
    "normal": "assets/dogs/dog_033_normal.png",
    "happy": "assets/dogs/dog_033_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_03",
-   "pages": [
-    5,
-    6
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "034",
    "key": "cairn_terrier",
    "nameJa": "ケアーン・テリア",
+   "category": "制作済み",
+   "imageRef": "034",
    "normal": "assets/dogs/dog_034_normal.png",
    "happy": "assets/dogs/dog_034_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_03",
-   "pages": [
-    7,
-    8
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "035",
    "key": "norfolk_terrier",
    "nameJa": "ノーフォーク・テリア",
+   "category": "制作済み",
+   "imageRef": "035",
    "normal": "assets/dogs/dog_035_normal.png",
    "happy": "assets/dogs/dog_035_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_03",
-   "pages": [
-    9,
-    10
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "036",
    "key": "norwich_terrier",
    "nameJa": "ノーリッチ・テリア",
+   "category": "制作済み",
+   "imageRef": "036",
    "normal": "assets/dogs/dog_036_normal.png",
    "happy": "assets/dogs/dog_036_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_03",
-   "pages": [
-    11,
-    12
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "037",
    "key": "scottish_terrier",
    "nameJa": "スコティッシュ・テリア",
+   "category": "制作済み",
+   "imageRef": "037",
    "normal": "assets/dogs/dog_037_normal.png",
    "happy": "assets/dogs/dog_037_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_03",
-   "pages": [
-    13,
-    14
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "038",
    "key": "border_terrier",
    "nameJa": "ボーダー・テリア",
+   "category": "制作済み",
+   "imageRef": "038",
    "normal": "assets/dogs/dog_038_normal.png",
    "happy": "assets/dogs/dog_038_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_03",
-   "pages": [
-    15,
-    16
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "039",
    "key": "wire_fox_terrier",
    "nameJa": "ワイアー・フォックス・テリア",
+   "category": "制作済み",
+   "imageRef": "039",
    "normal": "assets/dogs/dog_039_normal.png",
    "happy": "assets/dogs/dog_039_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_03",
-   "pages": [
-    17,
-    18
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "040",
    "key": "smooth_fox_terrier",
    "nameJa": "スムース・フォックス・テリア",
+   "category": "制作済み",
+   "imageRef": "040",
    "normal": "assets/dogs/dog_040_normal.png",
    "happy": "assets/dogs/dog_040_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_03",
-   "pages": [
-    19,
-    20
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "041",
    "key": "parson_russell_terrier",
    "nameJa": "パーソン・ラッセル・テリア",
+   "category": "制作済み",
+   "imageRef": "041",
    "normal": "assets/dogs/dog_041_normal.png",
    "happy": "assets/dogs/dog_041_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_03",
-   "pages": [
-    21,
-    22
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "042",
    "key": "australian_terrier",
    "nameJa": "オーストラリアン・テリア",
+   "category": "制作済み",
+   "imageRef": "042",
    "normal": "assets/dogs/dog_042_normal.png",
    "happy": "assets/dogs/dog_042_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_03",
-   "pages": [
-    23,
-    24
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "043",
    "key": "australian_silky_terrier",
    "nameJa": "オーストラリアン・シルキー・テリア",
+   "category": "制作済み",
+   "imageRef": "043",
    "normal": "assets/dogs/dog_043_normal.png",
    "happy": "assets/dogs/dog_043_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_03",
-   "pages": [
-    25,
-    26
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "044",
    "key": "toy_manchester_terrier",
    "nameJa": "トイ・マンチェスター・テリア",
+   "category": "制作済み",
+   "imageRef": "044",
    "normal": "assets/dogs/dog_044_normal.png",
    "happy": "assets/dogs/dog_044_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_03",
-   "pages": [
-    27,
-    28
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "045",
    "key": "english_toy_terrier",
    "nameJa": "イングリッシュ・トイ・テリア",
+   "category": "制作済み",
+   "imageRef": "045",
    "normal": "assets/dogs/dog_045_normal.png",
    "happy": "assets/dogs/dog_045_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_03",
-   "pages": [
-    29,
-    30
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "046",
    "key": "miniature_bull_terrier",
    "nameJa": "ミニチュア・ブル・テリア",
+   "category": "制作済み",
+   "imageRef": "046",
    "normal": "assets/dogs/dog_046_normal.png",
    "happy": "assets/dogs/dog_046_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_04",
-   "pages": [
-    1,
-    2
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "047",
    "key": "bolognese",
    "nameJa": "ボロニーズ",
+   "category": "制作済み",
+   "imageRef": "047",
    "normal": "assets/dogs/dog_047_normal.png",
    "happy": "assets/dogs/dog_047_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_04",
-   "pages": [
-    3,
-    4
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "048",
    "key": "coton_de_tulear",
    "nameJa": "コトン・ド・テュレアール",
+   "category": "制作済み",
+   "imageRef": "048",
    "normal": "assets/dogs/dog_048_normal.png",
    "happy": "assets/dogs/dog_048_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_04",
-   "pages": [
-    5,
-    6
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "049",
    "key": "havanese",
    "nameJa": "ハバニーズ",
+   "category": "制作済み",
+   "imageRef": "049",
    "normal": "assets/dogs/dog_049_normal.png",
    "happy": "assets/dogs/dog_049_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_04",
-   "pages": [
-    7,
-    8
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "050",
    "key": "lhasa_apso",
    "nameJa": "ラサ・アプソ",
+   "category": "制作済み",
+   "imageRef": "050",
    "normal": "assets/dogs/dog_050_normal.png",
    "happy": "assets/dogs/dog_050_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_04",
-   "pages": [
-    9,
-    10
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "051",
    "key": "tibetan_spaniel",
    "nameJa": "チベタン・スパニエル",
+   "category": "制作済み",
+   "imageRef": "051",
    "normal": "assets/dogs/dog_051_normal.png",
    "happy": "assets/dogs/dog_051_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_04",
-   "pages": [
-    11,
-    12
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "052",
    "key": "chinese_crested_dog",
    "nameJa": "チャイニーズ・クレステッド・ドッグ",
+   "category": "制作済み",
+   "imageRef": "052",
    "normal": "assets/dogs/dog_052_normal.png",
    "happy": "assets/dogs/dog_052_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_04",
-   "pages": [
-    13,
-    14
-   ],
-   "ready": false
+   "ready": true
   },
   {
    "id": "053",
    "key": "affenpinscher",
    "nameJa": "アーフェンピンシャー",
+   "category": "将来制作",
+   "imageRef": "053",
    "normal": "assets/dogs/dog_053_normal.png",
    "happy": "assets/dogs/dog_053_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_04",
-   "pages": [
-    15,
-    16
-   ],
    "ready": false
   },
   {
    "id": "054",
    "key": "king_charles_spaniel",
    "nameJa": "キング・チャールズ・スパニエル",
+   "category": "将来制作",
+   "imageRef": "054",
    "normal": "assets/dogs/dog_054_normal.png",
    "happy": "assets/dogs/dog_054_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_04",
-   "pages": [
-    17,
-    18
-   ],
    "ready": false
   },
   {
    "id": "055",
    "key": "schipperke",
    "nameJa": "スキッパーキ",
+   "category": "将来制作",
+   "imageRef": "055",
    "normal": "assets/dogs/dog_055_normal.png",
    "happy": "assets/dogs/dog_055_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_04",
-   "pages": [
-    19,
-    20
-   ],
    "ready": false
   },
   {
    "id": "056",
    "key": "lowchen",
    "nameJa": "ローシェン",
+   "category": "将来制作",
+   "imageRef": "056",
    "normal": "assets/dogs/dog_056_normal.png",
    "happy": "assets/dogs/dog_056_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_04",
-   "pages": [
-    21,
-    22
-   ],
    "ready": false
   },
   {
    "id": "057",
    "key": "german_spitz",
    "nameJa": "ジャーマン・スピッツ",
+   "category": "将来制作",
+   "imageRef": "057",
    "normal": "assets/dogs/dog_057_normal.png",
    "happy": "assets/dogs/dog_057_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_04",
-   "pages": [
-    23,
-    24
-   ],
    "ready": false
   },
   {
    "id": "058",
    "key": "russian_toy",
    "nameJa": "ロシアン・トイ",
+   "category": "将来制作",
+   "imageRef": "058",
    "normal": "assets/dogs/dog_058_normal.png",
    "happy": "assets/dogs/dog_058_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_04",
-   "pages": [
-    25,
-    26
-   ],
    "ready": false
   },
   {
    "id": "059",
    "key": "cardigan_welsh_corgi",
    "nameJa": "ウェルシュ・コーギー・カーディガン",
+   "category": "今回制作",
+   "imageRef": "059",
    "normal": "assets/dogs/dog_059_normal.png",
    "happy": "assets/dogs/dog_059_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_04",
-   "pages": [
-    27,
-    28
-   ],
    "ready": false
   },
   {
    "id": "060",
    "key": "miniature_australian_shepherd",
    "nameJa": "ミニチュア・オーストラリアン・シェパード",
+   "category": "将来制作",
+   "imageRef": "060",
    "normal": "assets/dogs/dog_060_normal.png",
    "happy": "assets/dogs/dog_060_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_04",
-   "pages": [
-    29,
-    30
-   ],
    "ready": false
   },
   {
    "id": "061",
    "key": "sealyham_terrier",
    "nameJa": "シーリハム・テリア",
+   "category": "将来制作",
+   "imageRef": "061",
    "normal": "assets/dogs/dog_061_normal.png",
    "happy": "assets/dogs/dog_061_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_05",
-   "pages": [
-    1,
-    2
-   ],
    "ready": false
   },
   {
    "id": "062",
    "key": "dandie_dinmont_terrier",
    "nameJa": "ダンディ・ディンモント・テリア",
+   "category": "将来制作",
+   "imageRef": "062",
    "normal": "assets/dogs/dog_062_normal.png",
    "happy": "assets/dogs/dog_062_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_05",
-   "pages": [
-    3,
-    4
-   ],
    "ready": false
   },
   {
    "id": "063",
    "key": "skye_terrier",
    "nameJa": "スカイ・テリア",
+   "category": "将来制作",
+   "imageRef": "063",
    "normal": "assets/dogs/dog_063_normal.png",
    "happy": "assets/dogs/dog_063_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_05",
-   "pages": [
-    5,
-    6
-   ],
    "ready": false
   },
   {
    "id": "064",
    "key": "bedlington_terrier",
    "nameJa": "ベドリントン・テリア",
+   "category": "将来制作",
+   "imageRef": "064",
    "normal": "assets/dogs/dog_064_normal.png",
    "happy": "assets/dogs/dog_064_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_05",
-   "pages": [
-    7,
-    8
-   ],
    "ready": false
   },
   {
    "id": "065",
    "key": "medium_poodle",
    "nameJa": "ミディアム・プードル",
-   "normal": "assets/dogs/dog_065_normal.png",
-   "happy": "assets/dogs/dog_065_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_05",
-   "pages": [
-    9,
-    10
-   ],
-   "ready": false
+   "category": "共通素材を使用",
+   "imageRef": "001",
+   "normal": "assets/dogs/dog_001_normal.png",
+   "happy": "assets/dogs/dog_001_happy.png",
+   "ready": true
   },
   {
    "id": "066",
    "key": "american_cocker_spaniel",
    "nameJa": "アメリカン・コッカー・スパニエル",
+   "category": "今回制作",
+   "imageRef": "066",
    "normal": "assets/dogs/dog_066_normal.png",
    "happy": "assets/dogs/dog_066_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_05",
-   "pages": [
-    11,
-    12
-   ],
    "ready": false
   },
   {
    "id": "067",
    "key": "english_cocker_spaniel",
    "nameJa": "イングリッシュ・コッカー・スパニエル",
+   "category": "今回制作",
+   "imageRef": "067",
    "normal": "assets/dogs/dog_067_normal.png",
    "happy": "assets/dogs/dog_067_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_05",
-   "pages": [
-    13,
-    14
-   ],
    "ready": false
   },
   {
    "id": "068",
    "key": "english_springer_spaniel",
    "nameJa": "イングリッシュ・スプリンガー・スパニエル",
+   "category": "将来制作",
+   "imageRef": "068",
    "normal": "assets/dogs/dog_068_normal.png",
    "happy": "assets/dogs/dog_068_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_05",
-   "pages": [
-    15,
-    16
-   ],
    "ready": false
   },
   {
    "id": "069",
    "key": "brittany_spaniel",
    "nameJa": "ブリタニー・スパニエル",
+   "category": "将来制作",
+   "imageRef": "069",
    "normal": "assets/dogs/dog_069_normal.png",
    "happy": "assets/dogs/dog_069_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_05",
-   "pages": [
-    17,
-    18
-   ],
    "ready": false
   },
   {
    "id": "070",
    "key": "bulldog",
    "nameJa": "ブルドッグ",
+   "category": "今回制作",
+   "imageRef": "070",
    "normal": "assets/dogs/dog_070_normal.png",
    "happy": "assets/dogs/dog_070_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_05",
-   "pages": [
-    19,
-    20
-   ],
    "ready": false
   },
   {
    "id": "071",
    "key": "siberian_husky",
    "nameJa": "シベリアン・ハスキー",
+   "category": "今回制作",
+   "imageRef": "071",
    "normal": "assets/dogs/dog_071_normal.png",
    "happy": "assets/dogs/dog_071_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_05",
-   "pages": [
-    21,
-    22
-   ],
    "ready": false
   },
   {
    "id": "072",
    "key": "whippet",
    "nameJa": "ウィペット",
+   "category": "将来制作",
+   "imageRef": "072",
    "normal": "assets/dogs/dog_072_normal.png",
    "happy": "assets/dogs/dog_072_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_05",
-   "pages": [
-    23,
-    24
-   ],
    "ready": false
   },
   {
    "id": "073",
    "key": "basset_hound",
    "nameJa": "バセット・ハウンド",
+   "category": "将来制作",
+   "imageRef": "073",
    "normal": "assets/dogs/dog_073_normal.png",
    "happy": "assets/dogs/dog_073_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_05",
-   "pages": [
-    25,
-    26
-   ],
    "ready": false
   },
   {
    "id": "074",
    "key": "standard_schnauzer",
    "nameJa": "スタンダード・シュナウザー",
+   "category": "将来制作",
+   "imageRef": "074",
    "normal": "assets/dogs/dog_074_normal.png",
    "happy": "assets/dogs/dog_074_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_05",
-   "pages": [
-    27,
-    28
-   ],
    "ready": false
   },
   {
    "id": "075",
    "key": "shar_pei",
    "nameJa": "シャー・ペイ",
+   "category": "将来制作",
+   "imageRef": "075",
    "normal": "assets/dogs/dog_075_normal.png",
    "happy": "assets/dogs/dog_075_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_05",
-   "pages": [
-    29,
-    30
-   ],
    "ready": false
   },
   {
    "id": "076",
    "key": "chow_chow",
    "nameJa": "チャウ・チャウ",
+   "category": "今回制作",
+   "imageRef": "076",
    "normal": "assets/dogs/dog_076_normal.png",
    "happy": "assets/dogs/dog_076_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_06",
-   "pages": [
-    1,
-    2
-   ],
    "ready": false
   },
   {
    "id": "077",
    "key": "bull_terrier",
    "nameJa": "ブル・テリア",
+   "category": "将来制作",
+   "imageRef": "077",
    "normal": "assets/dogs/dog_077_normal.png",
    "happy": "assets/dogs/dog_077_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_06",
-   "pages": [
-    3,
-    4
-   ],
    "ready": false
   },
   {
    "id": "078",
    "key": "staffordshire_bull_terrier",
    "nameJa": "スタッフォードシャー・ブル・テリア",
+   "category": "将来制作",
+   "imageRef": "078",
    "normal": "assets/dogs/dog_078_normal.png",
    "happy": "assets/dogs/dog_078_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_06",
-   "pages": [
-    5,
-    6
-   ],
    "ready": false
   },
   {
    "id": "079",
    "key": "kerry_blue_terrier",
    "nameJa": "ケリー・ブルー・テリア",
+   "category": "将来制作",
+   "imageRef": "079",
    "normal": "assets/dogs/dog_079_normal.png",
    "happy": "assets/dogs/dog_079_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_06",
-   "pages": [
-    7,
-    8
-   ],
    "ready": false
   },
   {
    "id": "080",
    "key": "soft_coated_wheaten_terrier",
    "nameJa": "ソフトコーテッド・ウィートン・テリア",
+   "category": "将来制作",
+   "imageRef": "080",
    "normal": "assets/dogs/dog_080_normal.png",
    "happy": "assets/dogs/dog_080_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_06",
-   "pages": [
-    9,
-    10
-   ],
    "ready": false
   },
   {
    "id": "081",
    "key": "samoyed",
    "nameJa": "サモエド",
+   "category": "今回制作",
+   "imageRef": "081",
    "normal": "assets/dogs/dog_081_normal.png",
    "happy": "assets/dogs/dog_081_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_06",
-   "pages": [
-    11,
-    12
-   ],
    "ready": false
   },
   {
    "id": "082",
    "key": "basenji",
    "nameJa": "バセンジー",
+   "category": "将来制作",
+   "imageRef": "082",
    "normal": "assets/dogs/dog_082_normal.png",
    "happy": "assets/dogs/dog_082_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_06",
-   "pages": [
-    13,
-    14
-   ],
    "ready": false
   },
   {
    "id": "083",
    "key": "portuguese_water_dog",
    "nameJa": "ポーチュギーズ・ウォーター・ドッグ",
+   "category": "将来制作",
+   "imageRef": "083",
    "normal": "assets/dogs/dog_083_normal.png",
    "happy": "assets/dogs/dog_083_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_06",
-   "pages": [
-    15,
-    16
-   ],
    "ready": false
   },
   {
    "id": "084",
    "key": "norwegian_elkhound",
    "nameJa": "ノルウェジアン・エルクハウンド",
+   "category": "将来制作",
+   "imageRef": "084",
    "normal": "assets/dogs/dog_084_normal.png",
    "happy": "assets/dogs/dog_084_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_06",
-   "pages": [
-    17,
-    18
-   ],
    "ready": false
   },
   {
    "id": "085",
    "key": "finnish_spitz",
    "nameJa": "フィニッシュ・スピッツ",
+   "category": "将来制作",
+   "imageRef": "085",
    "normal": "assets/dogs/dog_085_normal.png",
    "happy": "assets/dogs/dog_085_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_06",
-   "pages": [
-    19,
-    20
-   ],
    "ready": false
   },
   {
    "id": "086",
    "key": "australian_shepherd",
    "nameJa": "オーストラリアン・シェパード",
+   "category": "今回制作",
+   "imageRef": "086",
    "normal": "assets/dogs/dog_086_normal.png",
    "happy": "assets/dogs/dog_086_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_06",
-   "pages": [
-    21,
-    22
-   ],
    "ready": false
   },
   {
    "id": "087",
    "key": "bearded_collie",
    "nameJa": "ビアデッド・コリー",
+   "category": "将来制作",
+   "imageRef": "087",
    "normal": "assets/dogs/dog_087_normal.png",
    "happy": "assets/dogs/dog_087_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_06",
-   "pages": [
-    23,
-    24
-   ],
    "ready": false
   },
   {
    "id": "088",
    "key": "lagotto_romagnolo",
    "nameJa": "ラゴット・ロマニョーロ",
+   "category": "将来制作",
+   "imageRef": "088",
    "normal": "assets/dogs/dog_088_normal.png",
    "happy": "assets/dogs/dog_088_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_06",
-   "pages": [
-    25,
-    26
-   ],
    "ready": false
   },
   {
    "id": "089",
    "key": "nova_scotia_duck_tolling_retriever",
    "nameJa": "ノヴァ・スコシア・ダック・トーリング・レトリーバー",
+   "category": "将来制作",
+   "imageRef": "089",
    "normal": "assets/dogs/dog_089_normal.png",
    "happy": "assets/dogs/dog_089_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_06",
-   "pages": [
-    27,
-    28
-   ],
    "ready": false
   },
   {
    "id": "090",
    "key": "welsh_terrier",
    "nameJa": "ウェルシュ・テリア",
+   "category": "将来制作",
+   "imageRef": "090",
    "normal": "assets/dogs/dog_090_normal.png",
    "happy": "assets/dogs/dog_090_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_06",
-   "pages": [
-    29,
-    30
-   ],
    "ready": false
   },
   {
    "id": "091",
    "key": "american_staffordshire_terrier",
    "nameJa": "アメリカン・スタッフォードシャー・テリア",
+   "category": "将来制作",
+   "imageRef": "091",
    "normal": "assets/dogs/dog_091_normal.png",
    "happy": "assets/dogs/dog_091_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_07",
-   "pages": [
-    1,
-    2
-   ],
    "ready": false
   },
   {
    "id": "092",
    "key": "german_pinscher",
    "nameJa": "ジャーマン・ピンシャー",
+   "category": "将来制作",
+   "imageRef": "092",
    "normal": "assets/dogs/dog_092_normal.png",
    "happy": "assets/dogs/dog_092_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_07",
-   "pages": [
-    3,
-    4
-   ],
    "ready": false
   },
   {
    "id": "093",
    "key": "puli",
    "nameJa": "プーリー",
+   "category": "将来制作",
+   "imageRef": "093",
    "normal": "assets/dogs/dog_093_normal.png",
    "happy": "assets/dogs/dog_093_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_07",
-   "pages": [
-    5,
-    6
-   ],
    "ready": false
   },
   {
    "id": "094",
    "key": "german_shepherd_dog",
    "nameJa": "ジャーマン・シェパード・ドッグ",
+   "category": "今回制作",
+   "imageRef": "094",
    "normal": "assets/dogs/dog_094_normal.png",
    "happy": "assets/dogs/dog_094_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_07",
-   "pages": [
-    7,
-    8
-   ],
    "ready": false
   },
   {
    "id": "095",
    "key": "bernese_mountain_dog",
    "nameJa": "バーニーズ・マウンテン・ドッグ",
+   "category": "将来制作",
+   "imageRef": "095",
    "normal": "assets/dogs/dog_095_normal.png",
    "happy": "assets/dogs/dog_095_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_07",
-   "pages": [
-    9,
-    10
-   ],
    "ready": false
   },
   {
    "id": "096",
    "key": "great_pyrenees",
    "nameJa": "グレート・ピレニーズ",
+   "category": "今回制作",
+   "imageRef": "096",
    "normal": "assets/dogs/dog_096_normal.png",
    "happy": "assets/dogs/dog_096_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_07",
-   "pages": [
-    11,
-    12
-   ],
    "ready": false
   },
   {
    "id": "097",
    "key": "saint_bernard",
    "nameJa": "セント・バーナード",
+   "category": "将来制作",
+   "imageRef": "097",
    "normal": "assets/dogs/dog_097_normal.png",
    "happy": "assets/dogs/dog_097_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_07",
-   "pages": [
-    13,
-    14
-   ],
    "ready": false
   },
   {
    "id": "098",
    "key": "dobermann",
    "nameJa": "ドーベルマン",
+   "category": "将来制作",
+   "imageRef": "098",
    "normal": "assets/dogs/dog_098_normal.png",
    "happy": "assets/dogs/dog_098_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_07",
-   "pages": [
-    15,
-    16
-   ],
    "ready": false
   },
   {
    "id": "099",
    "key": "great_dane",
    "nameJa": "グレート・デーン",
+   "category": "将来制作",
+   "imageRef": "099",
    "normal": "assets/dogs/dog_099_normal.png",
    "happy": "assets/dogs/dog_099_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_07",
-   "pages": [
-    17,
-    18
-   ],
    "ready": false
   },
   {
    "id": "100",
    "key": "newfoundland",
    "nameJa": "ニューファンドランド",
+   "category": "将来制作",
+   "imageRef": "100",
    "normal": "assets/dogs/dog_100_normal.png",
    "happy": "assets/dogs/dog_100_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_07",
-   "pages": [
-    19,
-    20
-   ],
    "ready": false
   },
   {
    "id": "101",
    "key": "borzoi",
    "nameJa": "ボルゾイ",
+   "category": "将来制作",
+   "imageRef": "101",
    "normal": "assets/dogs/dog_101_normal.png",
    "happy": "assets/dogs/dog_101_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_07",
-   "pages": [
-    21,
-    22
-   ],
    "ready": false
   },
   {
    "id": "102",
    "key": "irish_setter",
    "nameJa": "アイリッシュ・セター",
+   "category": "将来制作",
+   "imageRef": "102",
    "normal": "assets/dogs/dog_102_normal.png",
    "happy": "assets/dogs/dog_102_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_07",
-   "pages": [
-    23,
-    24
-   ],
    "ready": false
   },
   {
    "id": "103",
    "key": "english_setter",
    "nameJa": "イングリッシュ・セター",
+   "category": "将来制作",
+   "imageRef": "103",
    "normal": "assets/dogs/dog_103_normal.png",
    "happy": "assets/dogs/dog_103_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_07",
-   "pages": [
-    25,
-    26
-   ],
    "ready": false
   },
   {
    "id": "104",
    "key": "weimaraner",
    "nameJa": "ワイマラナー",
+   "category": "将来制作",
+   "imageRef": "104",
    "normal": "assets/dogs/dog_104_normal.png",
    "happy": "assets/dogs/dog_104_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_07",
-   "pages": [
-    27,
-    28
-   ],
    "ready": false
   },
   {
    "id": "105",
    "key": "german_shorthaired_pointer",
    "nameJa": "ジャーマン・ショートヘアード・ポインター",
+   "category": "将来制作",
+   "imageRef": "105",
    "normal": "assets/dogs/dog_105_normal.png",
    "happy": "assets/dogs/dog_105_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_07",
-   "pages": [
-    29,
-    30
-   ],
    "ready": false
   },
   {
    "id": "106",
    "key": "pointer",
    "nameJa": "ポインター",
+   "category": "将来制作",
+   "imageRef": "106",
    "normal": "assets/dogs/dog_106_normal.png",
    "happy": "assets/dogs/dog_106_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_08",
-   "pages": [
-    1,
-    2
-   ],
    "ready": false
   },
   {
    "id": "107",
    "key": "flat_coated_retriever",
    "nameJa": "フラットコーテッド・レトリーバー",
-   "normal": "assets/dogs/dog_107_normal.png",
-   "happy": "assets/dogs/dog_107_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_08",
-   "pages": [
-    3,
-    4
-   ],
-   "ready": false
+   "category": "共通素材を使用",
+   "imageRef": "011",
+   "normal": "assets/dogs/dog_011_normal.png",
+   "happy": "assets/dogs/dog_011_happy.png",
+   "ready": true
   },
   {
    "id": "108",
    "key": "boxer",
    "nameJa": "ボクサー",
+   "category": "将来制作",
+   "imageRef": "108",
    "normal": "assets/dogs/dog_108_normal.png",
    "happy": "assets/dogs/dog_108_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_08",
-   "pages": [
-    5,
-    6
-   ],
    "ready": false
   },
   {
    "id": "109",
    "key": "rottweiler",
    "nameJa": "ロットワイラー",
+   "category": "将来制作",
+   "imageRef": "109",
    "normal": "assets/dogs/dog_109_normal.png",
    "happy": "assets/dogs/dog_109_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_08",
-   "pages": [
-    7,
-    8
-   ],
    "ready": false
   },
   {
    "id": "110",
    "key": "mastiff",
    "nameJa": "マスティフ",
+   "category": "将来制作",
+   "imageRef": "110",
    "normal": "assets/dogs/dog_110_normal.png",
    "happy": "assets/dogs/dog_110_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_08",
-   "pages": [
-    9,
-    10
-   ],
    "ready": false
   },
   {
    "id": "111",
    "key": "bullmastiff",
    "nameJa": "ブルマスティフ",
+   "category": "将来制作",
+   "imageRef": "111",
    "normal": "assets/dogs/dog_111_normal.png",
    "happy": "assets/dogs/dog_111_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_08",
-   "pages": [
-    11,
-    12
-   ],
    "ready": false
   },
   {
    "id": "112",
    "key": "afghan_hound",
    "nameJa": "アフガン・ハウンド",
+   "category": "将来制作",
+   "imageRef": "112",
    "normal": "assets/dogs/dog_112_normal.png",
    "happy": "assets/dogs/dog_112_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_08",
-   "pages": [
-    13,
-    14
-   ],
    "ready": false
   },
   {
    "id": "113",
    "key": "saluki",
    "nameJa": "サルーキ",
+   "category": "将来制作",
+   "imageRef": "113",
    "normal": "assets/dogs/dog_113_normal.png",
    "happy": "assets/dogs/dog_113_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_08",
-   "pages": [
-    15,
-    16
-   ],
    "ready": false
   },
   {
    "id": "114",
    "key": "greyhound",
    "nameJa": "グレーハウンド",
+   "category": "将来制作",
+   "imageRef": "114",
    "normal": "assets/dogs/dog_114_normal.png",
    "happy": "assets/dogs/dog_114_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_08",
-   "pages": [
-    17,
-    18
-   ],
    "ready": false
   },
   {
    "id": "115",
    "key": "irish_wolfhound",
    "nameJa": "アイリッシュ・ウルフハウンド",
+   "category": "将来制作",
+   "imageRef": "115",
    "normal": "assets/dogs/dog_115_normal.png",
    "happy": "assets/dogs/dog_115_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_08",
-   "pages": [
-    19,
-    20
-   ],
    "ready": false
   },
   {
    "id": "116",
    "key": "dalmatian",
    "nameJa": "ダルメシアン",
+   "category": "将来制作",
+   "imageRef": "116",
    "normal": "assets/dogs/dog_116_normal.png",
    "happy": "assets/dogs/dog_116_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_08",
-   "pages": [
-    21,
-    22
-   ],
    "ready": false
   },
   {
    "id": "117",
    "key": "collie",
    "nameJa": "コリー",
+   "category": "将来制作",
+   "imageRef": "117",
    "normal": "assets/dogs/dog_117_normal.png",
    "happy": "assets/dogs/dog_117_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_08",
-   "pages": [
-    23,
-    24
-   ],
    "ready": false
   },
   {
    "id": "118",
    "key": "alaskan_malamute",
    "nameJa": "アラスカン・マラミュート",
+   "category": "将来制作",
+   "imageRef": "118",
    "normal": "assets/dogs/dog_118_normal.png",
    "happy": "assets/dogs/dog_118_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_08",
-   "pages": [
-    25,
-    26
-   ],
    "ready": false
   },
   {
    "id": "119",
    "key": "old_english_sheepdog",
    "nameJa": "オールド・イングリッシュ・シープドッグ",
+   "category": "将来制作",
+   "imageRef": "119",
    "normal": "assets/dogs/dog_119_normal.png",
    "happy": "assets/dogs/dog_119_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_08",
-   "pages": [
-    27,
-    28
-   ],
    "ready": false
   },
   {
    "id": "120",
    "key": "belgian_malinois",
    "nameJa": "ベルジアン・シェパード・ドッグ・マリノア",
+   "category": "将来制作",
+   "imageRef": "120",
    "normal": "assets/dogs/dog_120_normal.png",
    "happy": "assets/dogs/dog_120_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_08",
-   "pages": [
-    29,
-    30
-   ],
    "ready": false
   },
   {
    "id": "121",
    "key": "standard_poodle",
    "nameJa": "スタンダード・プードル",
-   "normal": "assets/dogs/dog_121_normal.png",
-   "happy": "assets/dogs/dog_121_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_09",
-   "pages": [
-    1,
-    2
-   ],
-   "ready": false
+   "category": "共通素材を使用",
+   "imageRef": "001",
+   "normal": "assets/dogs/dog_001_normal.png",
+   "happy": "assets/dogs/dog_001_happy.png",
+   "ready": true
   },
   {
    "id": "122",
    "key": "bloodhound",
    "nameJa": "ブラッドハウンド",
+   "category": "将来制作",
+   "imageRef": "122",
    "normal": "assets/dogs/dog_122_normal.png",
    "happy": "assets/dogs/dog_122_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_09",
-   "pages": [
-    3,
-    4
-   ],
    "ready": false
   },
   {
    "id": "123",
    "key": "rhodesian_ridgeback",
    "nameJa": "ローデシアン・リッジバック",
+   "category": "将来制作",
+   "imageRef": "123",
    "normal": "assets/dogs/dog_123_normal.png",
    "happy": "assets/dogs/dog_123_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_09",
-   "pages": [
-    5,
-    6
-   ],
    "ready": false
   },
   {
    "id": "124",
    "key": "leonberger",
    "nameJa": "レオンベルガー",
+   "category": "将来制作",
+   "imageRef": "124",
    "normal": "assets/dogs/dog_124_normal.png",
    "happy": "assets/dogs/dog_124_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_09",
-   "pages": [
-    7,
-    8
-   ],
    "ready": false
   },
   {
    "id": "125",
    "key": "white_swiss_shepherd_dog",
    "nameJa": "ホワイト・スイス・シェパード・ドッグ",
+   "category": "将来制作",
+   "imageRef": "125",
    "normal": "assets/dogs/dog_125_normal.png",
    "happy": "assets/dogs/dog_125_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_09",
-   "pages": [
-    9,
-    10
-   ],
    "ready": false
   },
   {
    "id": "126",
    "key": "giant_schnauzer",
    "nameJa": "ジャイアント・シュナウザー",
+   "category": "将来制作",
+   "imageRef": "126",
    "normal": "assets/dogs/dog_126_normal.png",
    "happy": "assets/dogs/dog_126_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_09",
-   "pages": [
-    11,
-    12
-   ],
    "ready": false
   },
   {
    "id": "127",
    "key": "airedale_terrier",
    "nameJa": "エアデール・テリア",
+   "category": "将来制作",
+   "imageRef": "127",
    "normal": "assets/dogs/dog_127_normal.png",
    "happy": "assets/dogs/dog_127_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_09",
-   "pages": [
-    13,
-    14
-   ],
    "ready": false
   },
   {
    "id": "128",
    "key": "dogue_de_bordeaux",
    "nameJa": "ドーグ・ド・ボルドー",
+   "category": "将来制作",
+   "imageRef": "128",
    "normal": "assets/dogs/dog_128_normal.png",
    "happy": "assets/dogs/dog_128_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_09",
-   "pages": [
-    15,
-    16
-   ],
    "ready": false
   },
   {
    "id": "129",
    "key": "akita",
    "nameJa": "秋田",
+   "category": "今回制作（保留：429の確認待ち）",
+   "imageRef": "129",
    "normal": "assets/dogs/dog_129_normal.png",
    "happy": "assets/dogs/dog_129_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_09",
-   "pages": [
-    17,
-    18
-   ],
    "ready": false
   },
   {
    "id": "130",
    "key": "hokkaido",
    "nameJa": "北海道",
+   "category": "将来制作",
+   "imageRef": "130",
    "normal": "assets/dogs/dog_130_normal.png",
    "happy": "assets/dogs/dog_130_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_09",
-   "pages": [
-    19,
-    20
-   ],
    "ready": false
   },
   {
    "id": "131",
    "key": "kai",
    "nameJa": "甲斐",
+   "category": "今回制作",
+   "imageRef": "131",
    "normal": "assets/dogs/dog_131_normal.png",
    "happy": "assets/dogs/dog_131_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_09",
-   "pages": [
-    21,
-    22
-   ],
    "ready": false
   },
   {
    "id": "132",
    "key": "kishu",
    "nameJa": "紀州",
+   "category": "将来制作",
+   "imageRef": "132",
    "normal": "assets/dogs/dog_132_normal.png",
    "happy": "assets/dogs/dog_132_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_09",
-   "pages": [
-    23,
-    24
-   ],
    "ready": false
   },
   {
    "id": "133",
    "key": "shikoku",
    "nameJa": "四国",
+   "category": "将来制作",
+   "imageRef": "133",
    "normal": "assets/dogs/dog_133_normal.png",
    "happy": "assets/dogs/dog_133_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_09",
-   "pages": [
-    25,
-    26
-   ],
    "ready": false
   },
   {
    "id": "134",
    "key": "japanese_terrier",
    "nameJa": "日本テリア",
+   "category": "将来制作",
+   "imageRef": "134",
    "normal": "assets/dogs/dog_134_normal.png",
    "happy": "assets/dogs/dog_134_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_09",
-   "pages": [
-    27,
-    28
-   ],
    "ready": false
   },
   {
    "id": "135",
    "key": "tosa",
    "nameJa": "土佐",
+   "category": "将来制作",
+   "imageRef": "135",
    "normal": "assets/dogs/dog_135_normal.png",
    "happy": "assets/dogs/dog_135_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_09",
-   "pages": [
-    29,
-    30
-   ],
    "ready": false
   },
   {
    "id": "136",
    "key": "american_akita",
    "nameJa": "アメリカン・アキタ",
+   "category": "将来制作",
+   "imageRef": "136",
    "normal": "assets/dogs/dog_136_normal.png",
    "happy": "assets/dogs/dog_136_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_10",
-   "pages": [
-    1,
-    2
-   ],
    "ready": false
   },
   {
    "id": "137",
    "key": "tibetan_terrier",
    "nameJa": "チベタン・テリア",
+   "category": "将来制作",
+   "imageRef": "137",
    "normal": "assets/dogs/dog_137_normal.png",
    "happy": "assets/dogs/dog_137_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_10",
-   "pages": [
-    3,
-    4
-   ],
    "ready": false
   },
   {
    "id": "138",
    "key": "tibetan_mastiff",
    "nameJa": "チベタン・マスティフ",
+   "category": "将来制作",
+   "imageRef": "138",
    "normal": "assets/dogs/dog_138_normal.png",
    "happy": "assets/dogs/dog_138_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_10",
-   "pages": [
-    5,
-    6
-   ],
    "ready": false
   },
   {
    "id": "139",
    "key": "komondor",
    "nameJa": "コモンドール",
+   "category": "将来制作",
+   "imageRef": "139",
    "normal": "assets/dogs/dog_139_normal.png",
    "happy": "assets/dogs/dog_139_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_10",
-   "pages": [
-    7,
-    8
-   ],
    "ready": false
   },
   {
    "id": "140",
    "key": "bergamasco",
    "nameJa": "ベルガマスコ",
+   "category": "将来制作",
+   "imageRef": "140",
    "normal": "assets/dogs/dog_140_normal.png",
    "happy": "assets/dogs/dog_140_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_10",
-   "pages": [
-    9,
-    10
-   ],
    "ready": false
   },
   {
    "id": "141",
    "key": "peruvian_hairless_dog",
    "nameJa": "ペルービアン・ヘアレス・ドッグ",
+   "category": "将来制作",
+   "imageRef": "141",
    "normal": "assets/dogs/dog_141_normal.png",
    "happy": "assets/dogs/dog_141_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_10",
-   "pages": [
-    11,
-    12
-   ],
    "ready": false
   },
   {
    "id": "142",
    "key": "xoloitzcuintle",
    "nameJa": "メキシカン・ヘアレス・ドッグ",
+   "category": "将来制作",
+   "imageRef": "142",
    "normal": "assets/dogs/dog_142_normal.png",
    "happy": "assets/dogs/dog_142_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_10",
-   "pages": [
-    13,
-    14
-   ],
    "ready": false
   },
   {
    "id": "143",
    "key": "pharaoh_hound",
    "nameJa": "ファラオ・ハウンド",
+   "category": "将来制作",
+   "imageRef": "143",
    "normal": "assets/dogs/dog_143_normal.png",
    "happy": "assets/dogs/dog_143_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_10",
-   "pages": [
-    15,
-    16
-   ],
    "ready": false
   },
   {
    "id": "144",
    "key": "cirneco_dell_etna",
    "nameJa": "チルネコ・デル・エトナ",
+   "category": "将来制作",
+   "imageRef": "144",
    "normal": "assets/dogs/dog_144_normal.png",
    "happy": "assets/dogs/dog_144_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_10",
-   "pages": [
-    17,
-    18
-   ],
    "ready": false
   },
   {
    "id": "145",
    "key": "azawakh",
    "nameJa": "アザワク",
+   "category": "将来制作",
+   "imageRef": "145",
    "normal": "assets/dogs/dog_145_normal.png",
    "happy": "assets/dogs/dog_145_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_10",
-   "pages": [
-    19,
-    20
-   ],
    "ready": false
   },
   {
    "id": "146",
    "key": "czechoslovakian_wolfdog",
    "nameJa": "チェコスロバキアン・ウルフドッグ",
+   "category": "将来制作",
+   "imageRef": "146",
    "normal": "assets/dogs/dog_146_normal.png",
    "happy": "assets/dogs/dog_146_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_10",
-   "pages": [
-    21,
-    22
-   ],
    "ready": false
   },
   {
    "id": "147",
    "key": "swedish_vallhund",
    "nameJa": "スウェディッシュ・ヴァルフント",
+   "category": "将来制作",
+   "imageRef": "147",
    "normal": "assets/dogs/dog_147_normal.png",
    "happy": "assets/dogs/dog_147_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_10",
-   "pages": [
-    23,
-    24
-   ],
    "ready": false
   },
   {
    "id": "148",
    "key": "kooikerhondje",
    "nameJa": "コーイケルホンディエ",
+   "category": "将来制作",
+   "imageRef": "148",
    "normal": "assets/dogs/dog_148_normal.png",
    "happy": "assets/dogs/dog_148_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_10",
-   "pages": [
-    25,
-    26
-   ],
    "ready": false
   },
   {
    "id": "149",
    "key": "icelandic_sheepdog",
    "nameJa": "アイスランド・シープドッグ",
+   "category": "将来制作",
+   "imageRef": "149",
    "normal": "assets/dogs/dog_149_normal.png",
    "happy": "assets/dogs/dog_149_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_10",
-   "pages": [
-    27,
-    28
-   ],
    "ready": false
   },
   {
    "id": "150",
    "key": "norwegian_buhund",
    "nameJa": "ノルウェジアン・ブーフント",
+   "category": "将来制作",
+   "imageRef": "150",
    "normal": "assets/dogs/dog_150_normal.png",
    "happy": "assets/dogs/dog_150_happy.png",
-   "canvaFile": "うちのこ_犬種別イラスト_10",
-   "pages": [
-    29,
-    30
-   ],
    "ready": false
   }
  ]

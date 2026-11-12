@@ -1,0 +1,31 @@
+{
+  "name": "cocomotivate-reel-test",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Co.Co.Motivate Instagram reel experiment (Remotion)",
+  "scripts": {
+    "studio": "remotion studio",
+    "tts": "python3 scripts/tts.py",
+    "audio": "python3 scripts/make_audio.py",
+    "render": "remotion render Reel out/reel.mp4",
+    "thumb": "remotion still Reel out/thumbnail.png --frame=0",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.543",
+    "@remotion/fonts": "^4.0.543",
+    "@remotion/media": "^4.0.543",
+    "budoux": "^0.7.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "remotion": "^4.0.543"
+  },
+  "devDependencies": {
+    "@expo-google-fonts/m-plus-rounded-1c": "^0.4.4",
+    "@expo-google-fonts/noto-sans-jp": "^0.4.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

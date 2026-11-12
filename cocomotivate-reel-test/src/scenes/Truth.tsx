@@ -13,7 +13,7 @@ export const Truth: React.FC = () => {
   const eThought = evIn("truth", "thought");
   const eNot = evIn("truth", "notConfirmed");
 
-  const a = pop(frame, fps, eThought - 4, 13);
+  const a = pop(frame, fps, Math.min(eThought - 4, 4), 13);
   const check = pop(frame, fps, eThought + 14, 10, 220);
   const neq = pop(frame, fps, eThought + 34, 9, 200);
   const b = pop(frame, fps, eThought + 46, 13);

@@ -11,27 +11,26 @@ const sf = (id: Parameters<typeof scene>[0]) => scene(id).from;
 
 /** 全編を通して画面上を移動するナビゲーターのキーフレーム（絶対フレーム） */
 const KEYS: Key[] = [
-  { f: 0, x: 860, y: 2400, s: 0.56, expr: "normal", pose: "idle" },
-  { f: 10, x: 860, y: 1330, s: 0.56, expr: "happy", pose: "wave", dur: 22 },
-  { f: 50, x: 860, y: 1330, s: 0.56, expr: "normal", pose: "pointL", dur: 12 },
-  { f: EV.viewsReveal - 2, x: 860, y: 1325, s: 0.6, expr: "surprised", pose: "shock", dur: 8 },
-  { f: sf("problem") + 4, x: 900, y: 1310, s: 0.5, expr: "thinking", pose: "think", dur: 24 },
-  { f: EV.reelSplit, x: 900, y: 1310, s: 0.5, expr: "normal", pose: "pointL", dur: 12 },
-  { f: sf("consult") + 4, x: 900, y: 1310, s: 0.5, expr: "normal", pose: "idle", dur: 20 },
+  // 0フレーム目から画面内にいて、すぐ跳ねて登場
+  { f: 0, x: 880, y: 1700, s: 0.5, expr: "normal", pose: "idle" },
+  { f: 1, x: 880, y: 1320, s: 0.5, expr: "normal", pose: "pointL", dur: 12 },
+  { f: EV.viewsReveal - 2, x: 880, y: 1315, s: 0.54, expr: "surprised", pose: "shock", dur: 8 },
+  { f: EV.followersCount + 30, x: 880, y: 1320, s: 0.5, expr: "thinking", pose: "think", dur: 12 },
+  { f: EV.consultSay - 6, x: 880, y: 1320, s: 0.5, expr: "happy", pose: "pointL", dur: 12 },
+  { f: sf("problem") + 4, x: 900, y: 1310, s: 0.5, expr: "thinking", pose: "think", dur: 20 },
+  { f: sf("consult") + 4, x: 900, y: 1310, s: 0.5, expr: "normal", pose: "idle", dur: 16 },
   { f: EV.chatOpen, x: 900, y: 1310, s: 0.5, expr: "happy", pose: "pointL", dur: 12 },
-  { f: EV.chip3 + 20, x: 900, y: 1310, s: 0.5, expr: "thinking", pose: "think", dur: 12 },
-  { f: sf("ideas") + 4, x: 900, y: 1310, s: 0.5, expr: "happy", pose: "pointL", dur: 24 },
+  { f: sf("ideas") + 4, x: 900, y: 1310, s: 0.5, expr: "happy", pose: "pointL", dur: 18 },
   { f: EV.idea3 + 6, x: 900, y: 1310, s: 0.5, expr: "happy", pose: "cheer", dur: 10 },
-  { f: sf("truth") + 4, x: 900, y: 1310, s: 0.5, expr: "serious", pose: "idle", dur: 18 },
+  { f: sf("truth") + 4, x: 900, y: 1310, s: 0.5, expr: "serious", pose: "idle", dur: 16 },
   { f: EV.notConfirmed - 2, x: 900, y: 1300, s: 0.52, expr: "surprised", pose: "shock", dur: 8 },
   { f: EV.notConfirmed + 22, x: 900, y: 1310, s: 0.5, expr: "serious", pose: "think", dur: 10 },
-  { f: sf("ending") - 14, x: 900, y: 2300, s: 0.5, expr: "serious", pose: "idle", dur: 14 },
-  { f: sf("ending") + 2, x: 540, y: 2300, s: 0.86, expr: "happy", pose: "idle", dur: 1 },
-  { f: sf("ending") + 6, x: 540, y: 1290, s: 0.86, expr: "happy", pose: "wave", dur: 26 },
-  { f: EV.tool + 30, x: 540, y: 1290, s: 0.86, expr: "normal", pose: "idle", dur: 10 },
-  { f: EV.verify, x: 540, y: 1290, s: 0.86, expr: "serious", pose: "pointL", dur: 10 },
-  { f: EV.final1 - 6, x: 540, y: 1290, s: 0.74, expr: "happy", pose: "cheer", dur: 16 },
-  { f: EV.final2 + 40, x: 540, y: 1290, s: 0.74, expr: "happy", pose: "wave", dur: 12 },
+  // コツのシーンはカードを広く見せるため一旦退場
+  { f: sf("tips") - 6, x: 900, y: 2300, s: 0.5, expr: "happy", pose: "wave", dur: 16 },
+  { f: sf("ending") - 4, x: 540, y: 2300, s: 0.62, expr: "happy", pose: "idle", dur: 1 },
+  { f: sf("ending"), x: 540, y: 1320, s: 0.62, expr: "happy", pose: "wave", dur: 22 },
+  { f: EV.final2, x: 540, y: 1320, s: 0.62, expr: "happy", pose: "cheer", dur: 10 },
+  { f: EV.practice + 30, x: 540, y: 1320, s: 0.62, expr: "happy", pose: "wave", dur: 10 },
 ];
 
 const handsFor = (pose: Pose, frame: number): [Hand, Hand] => {

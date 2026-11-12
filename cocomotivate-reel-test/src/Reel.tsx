@@ -9,6 +9,7 @@ import { Ending } from "./scenes/Ending";
 import { Hook } from "./scenes/Hook";
 import { Ideas } from "./scenes/Ideas";
 import { Problem } from "./scenes/Problem";
+import { Tips } from "./scenes/Tips";
 import { Truth } from "./scenes/Truth";
 import { SceneId, TL } from "./timeline";
 
@@ -18,16 +19,18 @@ const SCENES: Record<SceneId, React.FC> = {
   consult: Consult,
   ideas: Ideas,
   truth: Truth,
+  tips: Tips,
   ending: Ending,
 };
 
 const OVERLAP = 8;
 
 /** シーンの入り/出のトランジション（フレームベース） */
-const SceneWrap: React.FC<React.PropsWithChildren<{ last: boolean }>> = ({ children, last }) => {
+const SceneWrap: React.FC<React.PropsWithChildren<{ last: boolean; first: boolean }>> = ({ children, last, first }) => {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
-  const inP = interpolate(frame, [0, 12], [0, 1], { ...clamp, easing: easeOut });
+  // 冒頭シーンは0フレーム目から完全に表示（最初の2秒で掴むため）
+  const inP = first ? 1 : interpolate(frame, [0, 12], [0, 1], { ...clamp, easing: easeOut });
   const outP = last ? 0 : interpolate(frame, [durationInFrames - OVERLAP - 4, durationInFrames], [0, 1], clamp);
   return (
     <AbsoluteFill
@@ -51,7 +54,7 @@ export const Reel: React.FC = () => {
         const last = i === TL.scenes.length - 1;
         return (
           <Sequence key={s.id} name={s.id} from={s.from} durationInFrames={s.duration + (last ? 0 : OVERLAP)} layout="none">
-            <SceneWrap last={last}>
+            <SceneWrap last={last} first={i === 0}>
               <Comp />
             </SceneWrap>
           </Sequence>

@@ -46,27 +46,31 @@ def kana_moras(kana):
 
 # 演出キュー: (イベント名, 行番号, 読みのキーワード, 何番目の出現か(-1=最後))
 CUES = [
-    ("followersCount", 0, "サンゼン", 0),
-    ("viewsLabel", 1, "ストオリイズ", 0),
-    ("viewsReveal", 2, "ニジュウダイ", 0),
+    ("viewsReveal", 0, "ニジュウダイ", 0),
+    ("followersCount", 1, "サンゼン", 0),
+    ("consultSay", 2, "ソオダン", 0),
     ("sheets", 3, "イチマイ", 0),
-    ("timeRandom", 4, "トオコオジカン", 0),
+    ("timeRandom", 4, "ジカン", 0),
     ("skipDays", 4, "シナイ", 0),
-    ("reelSplit", 5, "リイル", 0),
-    ("chatOpen", 6, "チャット", 0),
-    ("chip1", 7, "スウジ", 0),
-    ("chip2", 7, "トオコオジョオキョオ", 0),
-    ("chip3", 7, "ウンヨオモクテキ", 0),
-    ("ideaWeek", 8, "ヨオビ", 0),
-    ("idea1", 9, "ニタク", 0),
-    ("idea2", 9, "ヤクダツ", 0),
-    ("idea3", 9, "シツモン", 0),
-    ("thought", 10, "カイゼンサク", 0),
-    ("notConfirmed", 11, "カクニン", -1),
-    ("tool", 12, "ドオグ", 0),
-    ("verify", 13, "ケンショオ", 0),
-    ("final1", 14, "カンガエ", 0),
-    ("final2", 14, "タシカメル", 0),
+    ("chatOpen", 5, "ツタエタ", 0),
+    ("chip1", 6, "スウジ", 0),
+    ("chip2", 6, "トオコオジョオキョオ", 0),
+    ("chip3", 6, "ウンヨオ", 0),
+    ("ideaWeek", 7, "ヨオビ", 0),
+    ("idea1", 8, "ニタク", 0),
+    ("idea2", 8, "ヤクダツ", 0),
+    ("idea3", 8, "シツモン", 0),
+    ("thought", 9, "カイゼンサク", 0),
+    ("notConfirmed", 10, "カクニン", -1),
+    ("tool", 11, "ドオグ", 0),
+    ("tipsTitle", 11, "ツカウ", 0),
+    ("tip1", 12, "ヒトツ", 0),
+    ("tip2", 13, "フタツ", 0),
+    ("tip3", 14, "ミッツ", 0),
+    ("tip3cmp", 14, "スウジ", 0),
+    ("final1", 15, "カンガエ", 0),
+    ("final2", 15, "タシカメル", 0),
+    ("practice", 15, "ジッセン", 0),
 ]
 
 HOLD = {s["id"]: s.get("holdAfterSec", 0.0) for s in cfg["scenes"]}
@@ -325,17 +329,16 @@ def typing(dur=0.6):
 
 E = {k: v / FPS for k, v in events.items()}
 S = {s["id"]: s["from"] / FPS for s in scenes}
-for sid in ["problem", "consult", "ideas", "truth", "ending"]:
+for sid in ["problem", "consult", "ideas", "truth", "tips", "ending"]:
     place(sfx, whoosh(), S[sid] - 0.12, 0.35)
-place(sfx, pop(660), 0.15, 0.35)
-# カウントアップのティック（0.9秒間）
+place(sfx, pop(660), 0.02, 0.35)
+place(sfx, thud(), E["viewsReveal"], 0.6)
 for k in range(14):
-    place(sfx, tick(), E["followersCount"] + k * 0.065, 0.18)
-place(sfx, pop(990), E["followersCount"] + 0.95, 0.4)
-place(sfx, thud(), E["viewsReveal"], 0.55)
-for k in ("sheets", "timeRandom", "skipDays", "reelSplit"):
+    place(sfx, tick(), E["followersCount"] + k * 0.055, 0.18)
+place(sfx, pop(990), E["followersCount"] + 0.8, 0.4)
+for k in ("sheets", "timeRandom", "skipDays"):
     place(sfx, pop(780), E[k], 0.3)
-place(sfx, typing(0.7), E["chatOpen"] + 0.1, 0.25)
+place(sfx, typing(0.7), E["chatOpen"], 0.25)
 for i, k in enumerate(("chip1", "chip2", "chip3")):
     place(sfx, pop(700 + i * 160), E[k], 0.35)
 for i, k in enumerate(("ideaWeek", "idea1", "idea2", "idea3")):
@@ -343,8 +346,10 @@ for i, k in enumerate(("ideaWeek", "idea1", "idea2", "idea3")):
 place(sfx, pop(880), E["thought"], 0.35)
 place(sfx, stamp(), E["notConfirmed"], 0.6)
 place(sfx, pop(740), E["tool"], 0.3)
-place(sfx, pop(900), E["verify"], 0.3)
-place(sfx, chime(72), E["final2"] + 0.2, 0.45)
+for i, k in enumerate(("tip1", "tip2", "tip3")):
+    place(sfx, pop(800 + i * 140), E[k], 0.4)
+place(sfx, chime(72), E["final2"], 0.4)
+place(sfx, chime(79), E["practice"] + 0.6, 0.3)
 
 # ---------------------------------------------------------------- ミックス
 mix_mono_voice = voice
@@ -363,6 +368,18 @@ with wave.open(os.path.join(ROOT, "public", "audio", "master.wav"), "wb") as w:
     w.setsampwidth(2)
     w.setframerate(SR)
     w.writeframes((out * 32767).astype(np.int16).tobytes())
+# ラウドネス正規化（2パス・線形）: -15 LUFS / True Peak -1.5 dBTP
+import subprocess, re as _re
+mp = os.path.join(ROOT, "public", "audio", "master.wav")
+tmp = mp + ".tmp.wav"
+r = subprocess.run(["ffmpeg", "-hide_banner", "-i", mp, "-af", "loudnorm=I=-15:TP=-1.5:LRA=11:print_format=json",
+                    "-f", "null", "-"], capture_output=True, text=True)
+m = json.loads(_re.search(r"\{[^{}]*\}\s*$", r.stderr).group(0))
+af = (f"loudnorm=I=-15:TP=-1.5:LRA=11:measured_I={m['input_i']}:measured_TP={m['input_tp']}:"
+      f"measured_LRA={m['input_lra']}:measured_thresh={m['input_thresh']}:offset={m['target_offset']}:linear=true")
+subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", mp, "-af", af, "-ar", str(SR), "-c:a", "pcm_s16le", tmp], check=True)
+os.replace(tmp, mp)
+print("loudnorm input", m["input_i"], "LUFS ->", "-15 target")
 print(f"total {total_sec:.2f}s = {total_frames} frames; scenes:",
       [(s['id'], s['from'], s['duration']) for s in scenes])
 print("events:", events)

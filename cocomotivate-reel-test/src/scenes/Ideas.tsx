@@ -44,7 +44,7 @@ export const Ideas: React.FC = () => {
   const eWeek = evIn("ideas", "ideaWeek");
   const ev = [evIn("ideas", "idea1"), evIn("ideas", "idea2"), evIn("ideas", "idea3")];
 
-  const week = pop(frame, fps, eWeek - 6, 14);
+  const week = pop(frame, fps, Math.min(eWeek - 6, 4), 14);
   // 最初の案は大きく中央 → 3枚が並ぶと上部へ縮小移動
   const settle = prog(frame, ev[0] - 10, 20, easeInOut);
   const weekTop = interpolate(settle, [0, 1], [480, 330]);

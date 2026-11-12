@@ -164,8 +164,7 @@ export const Subtitles: React.FC = () => {
   const cur = TL.subtitles.find((s) => frame >= s.from - 3 && frame < s.to + 4);
   if (!cur) return null;
   // 最後の決め台詞は画面中央の大見出しとして同期表示するため字幕帯は出さない
-  if (cur.text.startsWith("AIで考え")) return null;
-  const s = pop(frame, fps, cur.from - 3, 18, 220);
+    const s = pop(frame, fps, cur.from - 3, 18, 220);
   const out = interpolate(frame, [cur.to, cur.to + 4], [1, 0], clamp);
   return (
     <div
@@ -226,7 +225,7 @@ export const Card: React.FC<React.PropsWithChildren<{ style?: React.CSSPropertie
 export const Watermark: React.FC = () => {
   const frame = useCurrentFrame();
   const ending = TL.scenes.find((s) => s.id === "ending")!;
-  const o = interpolate(frame, [0, 15, ending.from - 10, ending.from], [0, 0.7, 0.7, 0], clamp);
+  const o = interpolate(frame, [ending.from - 10, ending.from], [0.7, 0], clamp);
   return (
     <div
       style={{

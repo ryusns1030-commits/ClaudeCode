@@ -1,6 +1,6 @@
 import data from "./timeline.json";
 
-export type SceneId = "hook" | "problem" | "consult" | "ideas" | "truth" | "ending";
+export type SceneId = "hook" | "problem" | "consult" | "ideas" | "truth" | "tips" | "ending";
 export type EventName = keyof typeof data.events;
 
 export const TL = data;

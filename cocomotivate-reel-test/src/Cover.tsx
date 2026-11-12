@@ -37,9 +37,16 @@ export const Cover: React.FC = () => (
         <span style={{ fontSize: 32, fontWeight: 700, color: C.sub, marginLeft: 20 }}>投稿から約20時間後</span>
       </div>
     </Card>
-    <div style={{ position: "absolute", left: 540 - 190, top: 1150 }}>
+    <div style={{ position: "absolute", left: 90, top: 1150 }}>
       <CharacterSVG width={380} height={456} expression="surprised" mouth="o" antenna={1}
         leftHand={{ x: 84, y: 214, rot: -30 }} rightHand={{ x: 316, y: 214, rot: 30 }} idPrefix="cover" />
+    </div>
+    <div style={{ position: "absolute", top: 1170, right: L.side, width: 500, display: "flex", flexDirection: "column", gap: 10, alignItems: "flex-end" }}>
+      <div style={{ fontFamily: FONT, fontWeight: 900, fontSize: 40, color: C.white, background: "rgba(5,14,40,0.8)", border: `4px solid ${C.glow}`, borderRadius: 28, padding: "16px 26px", lineHeight: 1.35, textAlign: "right" }}>
+        AI活用の<span style={{ color: C.glow }}>コツ3つ</span>
+        <br />
+        付き
+      </div>
     </div>
     <div style={{ position: "absolute", bottom: 150, left: 0, right: 0, textAlign: "center", fontFamily: ROUND, fontWeight: 900, fontSize: 44, color: C.white }}>
       Co.Co.Motivate

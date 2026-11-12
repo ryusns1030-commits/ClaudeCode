@@ -40,16 +40,16 @@ export const Consult: React.FC = () => {
   const e2 = evIn("consult", "chip2");
   const e3 = evIn("consult", "chip3");
 
-  const date = pop(frame, fps, 8, 14);
-  const win = pop(frame, fps, 16, 15);
-  const bubble = pop(frame, fps, eOpen + 4, 14);
+  const date = pop(frame, fps, 4, 14);
+  const win = pop(frame, fps, 6, 15);
+  const bubble = pop(frame, fps, eOpen - 8, 14);
   const title = "運用状況を整理して相談";
-  const typed = Math.floor(interpolate(frame, [eOpen + 8, eOpen + 30], [0, title.length], clamp));
+  const typed = Math.floor(interpolate(frame, [eOpen - 4, eOpen + 16], [0, title.length], clamp));
   const typing = pop(frame, fps, e3 + 26, 14);
 
   return (
     <AbsoluteFill>
-      <SceneTag no="03" label="ChatGPTに相談" />
+      <SceneTag no="03" label="AIに伝えた3つ" />
       <div style={{ position: "absolute", right: L.side, top: 232, opacity: date, scale: String(0.6 + 0.4 * date) }}>
         <div style={{ fontFamily: ROUND, fontWeight: 900, fontSize: 36, color: C.white, border: `3px solid ${C.glow}`, borderRadius: 18, padding: "2px 18px" }}>2026.11.05</div>
       </div>
@@ -60,7 +60,7 @@ export const Consult: React.FC = () => {
           <div style={{ width: 62, height: 62, borderRadius: "50%", background: C.navy, display: "flex", alignItems: "center", justifyContent: "center" }}>
             <IconSpark size={36} color={C.glow} />
           </div>
-          <div style={{ fontSize: 38, fontWeight: 900 }}>AIチャット</div>
+          <div style={{ fontSize: 38, fontWeight: 900 }}>ChatGPTに相談</div>
           <div style={{ marginLeft: "auto", fontSize: 24, fontWeight: 700, color: C.sub }}>※相談のイメージ</div>
         </div>
         {/* ユーザーの相談 */}
@@ -85,7 +85,7 @@ export const Consult: React.FC = () => {
             </div>
             <Chip show={pop(frame, fps, e1, 13)} icon={<IconChart size={44} />} title="数字" detail="フォロワー数・閲覧数" />
             <Chip show={pop(frame, fps, e2, 13)} icon={<IconStory size={44} />} title="投稿状況" detail="投稿枚数・投稿時間" />
-            <Chip show={pop(frame, fps, e3, 13)} icon={<IconTarget size={44} />} title="運用目的" />
+            <Chip show={pop(frame, fps, e3, 13)} icon={<IconTarget size={44} />} title="運用の目的" />
           </div>
         </div>
         {/* AIが考え中 */}

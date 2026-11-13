@@ -1,0 +1,87 @@
+# render-log  2026-11-13T04:15:29Z
+## remotion render
+Composition          Reel
+Codec                h264
+Output               articles/n75be77a4bb85-chatgpt-sales-email/deliverables/reel.mp4
+Concurrency          4x
+Detected differing memory amounts:
+Memory reported by CGroup: 8796093019827.89 MB
+Memory reported by /proc/meminfo MemAvailable: 14397.20 MB
+You might have inadvertently set the --memory flag of `docker run` to a value that is higher than the global Docker memory limit.
+Using the lower amount of memory for calculation.
+Detected differing memory amounts:
+Memory reported by CGroup: 8796093019823.19 MB
+Memory reported by /proc/meminfo MemAvailable: 14393.68 MB
+You might have inadvertently set the --memory flag of `docker run` to a value that is higher than the global Docker memory limit.
+Using the lower amount of memory for calculation.
+Detected differing memory amounts:
+Memory reported by CGroup: 8796093019822.01 MB
+Memory reported by /proc/meminfo MemAvailable: 14393.17 MB
+You might have inadvertently set the --memory flag of `docker run` to a value that is higher than the global Docker memory limit.
+Using the lower amount of memory for calculation.
+Detected differing memory amounts:
+Memory reported by CGroup: 8796093019817.81 MB
+Memory reported by /proc/meminfo MemAvailable: 14390.06 MB
+You might have inadvertently set the --memory flag of `docker run` to a value that is higher than the global Docker memory limit.
+Using the lower amount of memory for calculation.
++                    articles/n75be77a4bb85-chatgpt-sales-email/deliverables/reel.mp4 16.2 MB
+
+## ffprobe (reel.mp4)
+codec_name=h264
+profile=High
+width=1080
+height=1920
+display_aspect_ratio=9:16
+pix_fmt=yuv420p
+color_range=tv
+color_space=bt709
+color_transfer=bt709
+color_primaries=bt709
+r_frame_rate=30/1
+duration=44.066667
+nb_frames=1322
+codec_name=aac
+profile=LC
+sample_rate=48000
+channels=2
+r_frame_rate=0/0
+duration=44.075000
+nb_frames=2068
+duration=44.075000
+size=16152345
+bit_rate=2931792
+
+## decode check (ffmpeg -v error -f null)
+errors: 0
+
+## loudness (reel.mp4 audio, ebur128 true peak)
+    I:         -15.0 LUFS
+    LRA:         3.4 LU
+
+## master.wav
+sample_rate=48000
+channels=2
+duration=44.040000
+    True peak     Peak:       -1.5 dBFS
+
+## pipeline (reproduce)
+docker run -d -p 50021:50021 mirror.gcr.io/voicevox/voicevox_engine:cpu-latest   # VOICEVOX Engine 0.26.1
+.venv/bin/python scripts/article/tts.py articles/n75be77a4bb85-chatgpt-sales-email          # 12 lines, speech 36.48s, 9.61 mora/s (speedScale 1.25)
+.venv/bin/python scripts/article/make_audio.py articles/n75be77a4bb85-chatgpt-sales-email   # timeline.json + master.wav (loudnorm input -20.60 LUFS -> -15)
+npx remotion render articles/n75be77a4bb85-chatgpt-sales-email/video/index.ts Reel articles/n75be77a4bb85-chatgpt-sales-email/deliverables/reel.mp4   # 1m31s, concurrency 4
+npx remotion still  articles/n75be77a4bb85-chatgpt-sales-email/video/index.ts Cover articles/n75be77a4bb85-chatgpt-sales-email/deliverables/thumbnail.png
+
+## script revisions during stage 2
+- v2 measured ~47.0s (> 45s) -> applied compressionFallback #1 (L06 narration -> on-screen DRAFT label), shortened L04. speedScale unchanged.
+- subtitle manual breaks for L02, L07 (BudouX broke "送る/前の").
+- layout fixes before final render: subject card width, DRAFT label backing, prompt lines via BudouX.
+
+## licenses
+- Voice: VOICEVOX:春日部つむぎ — commercial/non-commercial OK with credit (speaker_info policy). Engine ToS requires VOICEVOX credit. Credit shown in ending + to be put in captions.
+- Fonts: Noto Sans JP, M PLUS Rounded 1c — SIL OFL 1.1 (public/fonts/OFL-*.txt), bundled locally.
+- BGM/SFX: procedurally synthesized with numpy (no external samples).
+- UI/character: original designs; no third-party logos or UI imitation; no platform watermarks.
+
+## not done in stage 2 (stage 3)
+- blackdetect / freezedetect / silencedetect, A/V cross-correlation, contact sheet review, mouth-shape frame check.
+- Human listening: NOT performed.

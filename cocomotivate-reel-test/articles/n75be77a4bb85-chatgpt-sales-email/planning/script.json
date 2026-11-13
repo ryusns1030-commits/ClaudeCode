@@ -1,0 +1,255 @@
+{
+  "schemaVersion": 2,
+  "article": {
+    "id": "n75be77a4bb85",
+    "slug": "chatgpt-sales-email",
+    "url": "https://note.com/dog_health_lab/n/n75be77a4bb85",
+    "title": "ChatGPTで海外向け営業メールを英訳。2024年に試したAI文章作成の実体験"
+  },
+  "videoType": "A_悩み解決型",
+  "targetDurationSec": [30, 45],
+  "estimatedDurationSec": 43.5,
+  "estimateNote": "推定値（約7.8モーラ/秒で計算）。第2段階でVOICEVOXの実測値に置き換える。45秒を超えた場合は compressionFallback の順に台本を短くする。話速を上げて尺を合わせることはしない。",
+  "voice": {
+    "engine": "VOICEVOX Engine",
+    "speaker": 8,
+    "speakerName": "春日部つむぎ（ノーマル）",
+    "credit": "VOICEVOX:春日部つむぎ",
+    "speedScale": 1.25,
+    "pitchScale": 0.0,
+    "intonationScale": 1.15,
+    "volumeScale": 1.0,
+    "outputSamplingRate": 48000
+  },
+  "speaker": 8,
+  "speakerName": "春日部つむぎ（ノーマル）",
+  "speedScale": 1.25,
+  "pitchScale": 0.0,
+  "intonationScale": 1.15,
+  "volumeScale": 1.0,
+  "gapSec": 0.14,
+  "sceneGapSec": 0.38,
+  "leadInSec": 0.12,
+  "tailSec": 1.6,
+  "scenes": [
+    {
+      "id": "hook",
+      "label": "フック",
+      "holdAfterSec": 0.3,
+      "lines": [
+        {
+          "id": "L01",
+          "sub": "英訳した営業メール、そのまま送ってない？",
+          "tts": "英訳した営業メール、そのまま送ってない？",
+          "expectKana": ["エイヤク", "エイギョウ", "メール", "ソノママ"],
+          "emphasis": ["そのまま"],
+          "facts": ["P4"]
+        },
+        {
+          "id": "L02",
+          "sub": "頼み方3つと、送る前のチェック5つ。",
+          "tts": "頼み方、みっつと、送る前のチェック、いつつ。",
+          "expectKana": ["タノミカタ", "ミッツ", "イツツ"],
+          "emphasis": ["3つ", "5つ"],
+          "facts": ["P3", "P4"]
+        }
+      ]
+    },
+    {
+      "id": "experience",
+      "label": "実体験",
+      "holdAfterSec": 0.4,
+      "lines": [
+        {
+          "id": "L03",
+          "sub": "2024年、ChatGPTで英訳しました。",
+          "tts": "にせんにじゅうよねん、チャットジーピーティーで、英訳しました。",
+          "expectKana": ["ニセンニジュウヨネン", "チャットジーピーティー", "エイヤク"],
+          "emphasis": ["2024年", "ChatGPT"],
+          "facts": ["F1", "F2"]
+        },
+        {
+          "id": "L04",
+          "sub": "件名は“相手のメリット”型に。別案には、お詫びの一言も。",
+          "tts": "件名は、相手のメリット型に。別案には、おわびの、ひとことも。",
+          "expectKana": ["ケンメイ", "メリット", "ベツアン", "オワビ", "ヒトコト"],
+          "emphasis": ["相手のメリット", "お詫び"],
+          "facts": ["F5", "F7"]
+        },
+        {
+          "id": "L05",
+          "sub": "ただ、送信や返信は未確認。",
+          "tts": "ただ、送信や返信は、未確認。",
+          "expectKana": ["ソウシン", "ヘンシン", "ミカクニン"],
+          "emphasis": ["未確認"],
+          "emphasisColor": "coral",
+          "facts": ["U1", "U2"]
+        },
+        {
+          "id": "L06",
+          "sub": "だから、英文は“下書き”扱い。",
+          "tts": "だから、英文は、下書きあつかい。",
+          "expectKana": ["エイブン", "シタガキ"],
+          "emphasis": ["下書き"],
+          "facts": ["P4", "P8"]
+        }
+      ]
+    },
+    {
+      "id": "prompt",
+      "label": "頼み方3つ",
+      "holdAfterSec": 0.3,
+      "lines": [
+        {
+          "id": "L07",
+          "sub": "頼むときは ① 読み手と場面を書く。",
+          "tts": "頼むときは、ひとつ。読み手と、場面を書く。",
+          "expectKana": ["タノム", "ヒトツ", "ヨミテ", "バメン"],
+          "emphasis": ["読み手と場面"],
+          "facts": ["P2", "P3"]
+        },
+        {
+          "id": "L08",
+          "sub": "② 元にない実績は、足さない。",
+          "tts": "ふたつ。元にない実績は、足さない。",
+          "expectKana": ["フタツ", "モトニナイ", "ジッセキ", "タサナイ"],
+          "emphasis": ["足さない"],
+          "facts": ["P3"]
+        },
+        {
+          "id": "L09",
+          "sub": "③ 意味が変わる所は、日本語で説明させる。",
+          "tts": "みっつ。意味が変わるところは、日本語で説明させる。",
+          "expectKana": ["ミッツ", "イミ", "ニホンゴ", "セツメイ"],
+          "emphasis": ["日本語で説明"],
+          "facts": ["P3"]
+        }
+      ]
+    },
+    {
+      "id": "check",
+      "label": "送る前の5チェック",
+      "holdAfterSec": 1.2,
+      "lines": [
+        {
+          "id": "L10",
+          "sub": "送る前は、この5項目をチェック。",
+          "tts": "送る前は、この、ごこうもくをチェック。",
+          "expectKana": ["オクルマエ", "ゴコウモク", "チェック"],
+          "emphasis": ["5項目"],
+          "facts": ["P4"]
+        }
+      ],
+      "onScreenList": [
+        "サービス内容は、元の日本語と同じ？",
+        "料金・実績に、誤りはない？",
+        "失礼な表現になっていない？",
+        "事実以上の効果を、約束していない？",
+        "連絡先・リンクは正しい？"
+      ]
+    },
+    {
+      "id": "conclusion",
+      "label": "結論",
+      "holdAfterSec": 0.5,
+      "lines": [
+        {
+          "id": "L11",
+          "sub": "文章の完成と、営業の成果は別。",
+          "tts": "文章の完成と、営業の成果は、別。",
+          "expectKana": ["ブンショウ", "カンセイ", "セイカ", "ベツ"],
+          "emphasis": ["完成", "成果"],
+          "facts": ["P8"]
+        },
+        {
+          "id": "L12",
+          "sub": "AIは出発点。判断は人です。",
+          "tts": "エーアイは、出発点。判断は、人です。",
+          "expectKana": ["エーアイ", "シュッパツテン", "ハンダン", "ヒト"],
+          "emphasis": ["出発点", "判断は人"],
+          "facts": ["P7", "まとめ"]
+        }
+      ]
+    },
+    {
+      "id": "ending",
+      "label": "CTA",
+      "lines": [
+        {
+          "id": "L13",
+          "sub": "保存して、送る前に見返してください。",
+          "tts": "保存して、送る前に、見返してください。",
+          "expectKana": ["ホゾン", "オクルマエ", "ミカエシテ"],
+          "emphasis": ["保存"],
+          "facts": ["CTA"]
+        }
+      ]
+    }
+  ],
+  "cues": [
+    { "name": "sendButtonHover", "line": "L01", "kana": "ソノママ", "sfx": "tick" },
+    { "name": "waitStamp", "line": "L01", "kana": "オクッテ", "sfx": "stamp" },
+    { "name": "promise3", "line": "L02", "kana": "ミッツ", "sfx": "pop" },
+    { "name": "promise5", "line": "L02", "kana": "イツツ", "sfx": "pop" },
+    { "name": "dateChip", "line": "L03", "kana": "ニセンニジュウヨネン", "sfx": "whoosh" },
+    { "name": "chatTyping", "line": "L03", "kana": "エイヤク", "sfx": "typing" },
+    { "name": "subjectCard", "line": "L04", "kana": "ケンメイ", "sfx": "pop" },
+    { "name": "meritHighlight", "line": "L04", "kana": "メリット", "sfx": "chime" },
+    { "name": "apologyCard", "line": "L04", "kana": "オワビ", "sfx": "pop" },
+    { "name": "unconfirmedStamp", "line": "L05", "kana": "ミカクニン", "sfx": "impact" },
+    { "name": "draftLabel", "line": "L06", "kana": "シタガキ", "sfx": "stamp" },
+    { "name": "cond1", "line": "L07", "kana": "ヨミテ", "sfx": "pop" },
+    { "name": "cond2", "line": "L08", "kana": "ジッセキ", "sfx": "pop" },
+    { "name": "cond3", "line": "L09", "kana": "ニホンゴ", "sfx": "pop" },
+    { "name": "checklistOpen", "line": "L10", "kana": "ゴコウモク", "sfx": "whoosh", "then": { "stagger": "checkItem", "count": 5, "intervalSec": 0.32, "sfx": "tick" } },
+    { "name": "splitCompare", "line": "L11", "kana": "セイカ", "sfx": "whoosh" },
+    { "name": "humanJudge", "line": "L12", "kana": "ハンダン", "sfx": "chime" },
+    { "name": "saveIcon", "line": "L13", "kana": "ホゾン", "sfx": "pop" }
+  ],
+  "onScreenText": [
+    { "scene": "hook", "text": "ChatGPTで英訳したあと…", "role": "topLabel" },
+    { "scene": "hook", "text": "最後に「送る前の5チェック」", "role": "retentionTeaser", "note": "最初のフレームから表示し、最後まで見る理由にする" },
+    { "scene": "experience", "text": "2024.10.08 の会話記録", "role": "dateChip" },
+    { "scene": "experience", "text": "Instagram運用代行の営業メール → 自然なアメリカ英語に", "role": "requestBubble" },
+    { "scene": "experience", "text": "※英文はイメージです（実際の文面は非公開）", "role": "disclaimer" },
+    { "scene": "experience", "text": "送信・返信・成約：未確認", "role": "stamp" },
+    { "scene": "prompt", "text": "※記事用に整理した再現例です（当時の原文ではありません）", "role": "disclaimer" },
+    { "scene": "check", "text": "保存して、送信前に見返そう", "role": "hint" },
+    { "scene": "ending", "text": "成功も限界も、実体験から。AI×仕事のリアルを発信中", "role": "seriesTeaser" },
+    { "scene": "ending", "text": "Co.Co.Motivate", "role": "brand" },
+    { "scene": "ending", "text": "VOICEVOX:春日部つむぎ", "role": "credit" }
+  ],
+  "promptCard": {
+    "title": "英訳プロンプト（再現例）",
+    "body": [
+      "以下の日本語を、アメリカの企業担当者に送る営業メールとして、自然で丁寧な英語にしてください。",
+      "・営業色が強すぎない表現にする",
+      "・元の文章にない実績やサービス内容を追加しない",
+      "・件名も提案する",
+      "・意味が変わりそうな箇所は日本語で説明する"
+    ],
+    "highlightMap": { "cond1": 0, "cond2": 2, "cond3": 4 },
+    "source": "原作「再現用プロンプト（当時の原文そのものではありません）」をそのまま使用"
+  },
+  "readingGuide": {
+    "ChatGPT": "チャットジーピーティー",
+    "AI": "エーアイ",
+    "2024年": "にせんにじゅうよねん",
+    "3つ": "みっつ",
+    "5つ": "いつつ",
+    "5項目": "ごこうもく",
+    "①②③": "ひとつ／ふたつ／みっつ",
+    "一言": "ひとこと（イチゲンと読まれないよう、ひらがなで渡す）",
+    "お詫び": "おわび",
+    "件名": "けんめい",
+    "別案": "べつあん",
+    "未確認": "みかくにん",
+    "所": "ところ（ひらがなで渡す）",
+    "扱い": "あつかい（ひらがなで渡す）"
+  },
+  "compressionFallback": [
+    "L06 を削除し、内容は画面の『下書き』ラベルだけで伝える（約−2.2秒）",
+    "L02 を『頼み方と、送る前のチェック。』に短縮（約−0.8秒）",
+    "check の holdAfterSec を 1.2→0.8 にする（約−0.4秒）"
+  ]
+}

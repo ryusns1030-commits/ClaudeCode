@@ -167,12 +167,25 @@ export const Experience: React.FC = () => {
           <div style={{ alignSelf: "flex-end", maxWidth: 640, background: C.blue, color: C.white, fontSize: 30, fontWeight: 700, lineHeight: 1.4, padding: "12px 24px", borderRadius: "24px 24px 6px 24px", opacity: req, translate: `0px ${(1 - req) * 20}px` }}>
             Instagram運用代行の営業メール → 自然なアメリカ英語に
           </div>
-          <div style={{ display: "flex", gap: 14, opacity: interpolate(ai, [0, 0.1], [0, 1], clamp) }}>
-            <AiAvatar />
-            <div style={{ background: C.paper, borderRadius: "6px 24px 24px 24px", padding: "18px 24px" }}>
-              <DraftLines p={ai} subjectColor={frame >= eMerit ? C.glow : "#BFD3F5"} />
+          {/* 返答が始まるまでは「入力中…」の吹き出し（空のカードにしない） */}
+          {frame < eType ? (
+            <div style={{ display: "flex", gap: 14, alignItems: "center", opacity: pop(frame, fps, eDate + 30, 14) }}>
+              <AiAvatar />
+              <div style={{ background: C.paper, borderRadius: "6px 24px 24px 24px", padding: "20px 26px", display: "flex", gap: 10, alignItems: "center" }}>
+                {[0, 1, 2].map((k) => (
+                  <div key={k} style={{ width: 16, height: 16, borderRadius: 8, background: C.blue, opacity: 0.35 + 0.65 * Math.max(0, Math.sin((frame - k * 5) * 0.25)) }} />
+                ))}
+                <span style={{ marginLeft: 8, fontSize: 24, fontWeight: 700, color: C.sub }}>英訳中…</span>
+              </div>
             </div>
-          </div>
+          ) : (
+            <div style={{ display: "flex", gap: 14 }}>
+              <AiAvatar />
+              <div style={{ background: C.paper, borderRadius: "6px 24px 24px 24px", padding: "18px 24px" }}>
+                <DraftLines p={ai} subjectColor={frame >= eMerit ? C.glow : "#BFD3F5"} />
+              </div>
+            </div>
+          )}
         </div>
         <div style={{ position: "absolute", right: 26, bottom: 14, fontSize: 21, fontWeight: 700, color: C.sub }}>※英文はイメージです（実際の文面は非公開）</div>
       </Card>
@@ -284,7 +297,7 @@ export const Check: React.FC = () => {
   const { fps } = useVideoConfig();
   const card = pop(frame, fps, 0, 15);
   const items = ["checkItem0", "checkItem1", "checkItem2", "checkItem3", "checkItem4"] as const;
-  const hint = pop(frame, fps, evIn("check", "checkItem4") + 10, 14);
+  const hint = pop(frame, fps, evIn("check", "checkItem4") + 24, 14);
   return (
     <AbsoluteFill>
       <SceneTag no="03" label="送る前の5チェック" />
@@ -306,7 +319,7 @@ export const Check: React.FC = () => {
         })}
       </Card>
       <div style={{ position: "absolute", left: X, top: 1110, width: CONTENT_W, textAlign: "center", fontFamily: FONT, fontWeight: 900, fontSize: 40, color: C.glow, opacity: hint, translate: `0px ${(1 - hint) * 20}px` }}>
-        保存して、送信前に見返そう
+        大事な文は、英語に詳しい人にも確認
       </div>
     </AbsoluteFill>
   );

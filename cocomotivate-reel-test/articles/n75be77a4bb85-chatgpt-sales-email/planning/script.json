@@ -33,7 +33,7 @@
   "gapSec": 0.14,
   "sceneGapSec": 0.38,
   "leadInSec": 0.12,
-  "tailSec": 1.4,
+  "tailSec": 1.0,
   "scenes": [
     {
       "id": "hook",
@@ -209,7 +209,7 @@
     {
       "id": "check",
       "label": "送る前の5チェック",
-      "holdAfterSec": 1.6,
+      "holdAfterSec": 2.4,
       "lines": [
         {
           "id": "L10",
@@ -392,14 +392,14 @@
     {
       "name": "checklistOpen",
       "line": "L10",
-      "kana": "ゴコウモク",
+      "kana": "オクル",
       "sfx": "whoosh",
       "then": {
         "stagger": "checkItem",
         "count": 5,
-        "intervalSec": 0.32,
+        "intervalSec": 0.3,
         "sfx": "tick",
-        "delaySec": 0.1
+        "delaySec": 0.25
       }
     },
     {
@@ -466,8 +466,9 @@
     },
     {
       "scene": "check",
-      "text": "保存して、送信前に見返そう",
-      "role": "hint"
+      "text": "大事な文は、英語に詳しい人にも確認",
+      "role": "hint",
+      "note": "v4: CTAと重複していたヒントを、原作P5の助言に差し替え"
     },
     {
       "scene": "ending",
@@ -523,8 +524,8 @@
     "check の holdAfterSec を 1.2→0.8 にする（約−0.4秒）"
   ],
   "revision": {
-    "version": "v3",
+    "version": "v4",
     "date": "2026-11-13",
-    "reason": "VOICEVOX実測で約47.0秒（発話39.67秒＋間）となり45秒を超えたため、compressionFallback①（L06削除→画面ラベル化）を適用し、L04の『の、ひとこと』を削除した。話速は1.25のまま。"
+    "reason": "第3段階QC：5項目の表示時間が約1.2秒しかなかったため、L10の冒頭から順に表示し、余韻を1.6→2.4秒に延長（終わりの余白は1.4→1.0秒）。ヒントはCTAと重複していたため、原作の助言（英語に詳しい人にも確認）に差し替え。"
   }
 }

@@ -1,0 +1,24 @@
+# 技術検査  2026-11-13T04:23:11Z  articles/n75be77a4bb85-chatgpt-sales-email/deliverables/reel-final.mp4
+## ffprobe
+stream|index=0|codec_name=h264|profile=High|codec_type=video|width=1080|height=1920|display_aspect_ratio=9:16|pix_fmt=yuv420p|color_range=tv|color_space=bt709|color_transfer=bt709|color_primaries=bt709|r_frame_rate=30/1|avg_frame_rate=30/1|duration=44.466667|nb_frames=1334
+stream|index=1|codec_name=aac|profile=LC|codec_type=audio|sample_rate=48000|channels=2|r_frame_rate=0/0|avg_frame_rate=0/0|duration=44.480000|nb_frames=2087
+format|duration=44.480000|size=16239964|bit_rate=2920856
+## decode errors
+count=0
+## blackdetect (d>=0.1s, pix_th=0.10)
+none
+## freezedetect (n=0.001, d>=1.0s)
+none
+## silencedetect (-50dB, d>=0.5s)
+none
+## loudness (ebur128, true peak)
+    I:         -15.1 LUFS
+    LRA:         3.4 LU
+    Peak:       -1.5 dBFS
+## clipping (sample peak / samples at full scale)
+[Parsed_astats_0 @ 0x556ff98e1bc0] Overall
+[Parsed_astats_0 @ 0x556ff98e1bc0] Peak level dB: -1.481848
+[Parsed_astats_0 @ 0x556ff98e1bc0] Flat factor: 0.000000
+## A/V sync (cross-correlation mp4 audio vs master.wav)
+lag=0.0 ms  corr=0.9999  (mp4 44.440s / wav 44.440s)
+contact sheet: /tmp/claude-0/-home-user-ClaudeCode/0ab87550-320b-553f-b7f1-fc22957c2b87/scratchpad/qc2/contact-sheet.png (24 frames)

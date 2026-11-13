@@ -85,3 +85,8 @@ npx remotion still  articles/n75be77a4bb85-chatgpt-sales-email/video/index.ts Co
 ## not done in stage 2 (stage 3)
 - blackdetect / freezedetect / silencedetect, A/V cross-correlation, contact sheet review, mouth-shape frame check.
 - Human listening: NOT performed.
+
+## stage 3 re-render (v4)  2026-11-13T04:21:19Z
+rendered reel-final.mp4 (16M)
+- v4 (stage 3): check items from L10 start, check hold 2.4s, tail 1.0s, hint replaced, typing indicator. total 44.47s. QC: see qc-tech.txt / quality-report.md
+- note: reel.mp4 = stage-2 (v3, 44.07s, kept for reference); reel-final.mp4 = v4. timeline.json / master.wav / script.md are v4.

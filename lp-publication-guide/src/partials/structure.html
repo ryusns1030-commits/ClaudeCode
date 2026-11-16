@@ -1,0 +1,76 @@
+<section class="page" id="p-structure">
+  <h1 class="title">中身のフォルダ構成と <code style="font-size:inherit">index.html</code> の位置</h1>
+  <p class="lead">解凍したフォルダを開いて、次のような構成になっているか確認しましょう。</p>
+
+  <div class="cols-7-5">
+    <div class="box help mt0">
+      <h4>解凍したフォルダの中身（例）</h4>
+      <ul class="tree">
+        <li><svg class="ic ic-folder"><use href="#i-folder"/></svg><b>lp</b> <span class="small">（解凍してできたフォルダ）</span>
+          <ul>
+            <li><svg class="ic ic-file"><use href="#i-file"/></svg><b>index.html</b><span class="mark">← トップページ</span></li>
+            <li><svg class="ic ic-folder"><use href="#i-folder"/></svg>css <span class="small">（色・配置）</span></li>
+            <li><svg class="ic ic-folder"><use href="#i-folder"/></svg>js <span class="small">（ボタンの動き）</span></li>
+            <li><svg class="ic ic-folder"><use href="#i-folder"/></svg>images <span class="small">（写真）</span></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <div class="box warn mt0">
+        <h4>これは説明用の例です</h4>
+        <p class="small mb0">実際の納品データでは、フォルダ名や数が違うことがあります（例：<code>img</code>、<code>assets</code> など）。<b>納品時の案内に書かれた構成を優先</b>してください。</p>
+      </div>
+      <div class="box help">
+        <h4>アップロードするもの</h4>
+        <p class="small mb0"><b>lpフォルダの「中身」すべて</b>（index.html と各フォルダ）です。<br>lpフォルダそのものではありません。</p>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="sec">サーバーに入れたあとの「正しい例」と「間違った例」</h2>
+  <p class="small">index.html が公開フォルダの<b>すぐ下</b>にないと、トップページが表示されないことがあります。</p>
+  <div class="cols3">
+    <div class="cmp good">
+      <div class="label">正しい例</div>
+      <ul class="tree" style="font-size:10pt;line-height:1.8">
+        <li><svg class="ic ic-folder"><use href="#i-folder"/></svg>{{OUTER}}
+          <ul><li><span class="target"><svg class="ic ic-folder"><use href="#i-folder"/></svg>{{INNER}}</span>
+            <ul>
+              <li><svg class="ic ic-file"><use href="#i-file"/></svg><b>index.html</b></li>
+              <li><svg class="ic ic-folder"><use href="#i-folder"/></svg>css</li>
+              <li><svg class="ic ic-folder"><use href="#i-folder"/></svg>js</li>
+              <li><svg class="ic ic-folder"><use href="#i-folder"/></svg>images</li>
+            </ul></li></ul></li>
+      </ul>
+      <p class="xs mb0">公開フォルダのすぐ下に index.html がある。</p>
+    </div>
+    <div class="cmp bad">
+      <div class="label">間違った例①</div>
+      <ul class="tree" style="font-size:10pt;line-height:1.8">
+        <li><svg class="ic ic-folder"><use href="#i-folder"/></svg>{{OUTER}}
+          <ul><li><span class="target"><svg class="ic ic-folder"><use href="#i-folder"/></svg>{{INNER}}</span>
+            <ul>
+              <li><svg class="ic ic-folder"><use href="#i-folder"/></svg><b>lp</b><span class="mark">← 1段深い</span>
+                <ul><li><svg class="ic ic-file"><use href="#i-file"/></svg>index.html</li>
+                <li class="dim">css / js / images</li></ul></li>
+            </ul></li></ul></li>
+      </ul>
+      <p class="xs mb0">lpフォルダごと入れてしまった。トップページが表示されません。</p>
+    </div>
+    <div class="cmp bad">
+      <div class="label">間違った例②</div>
+      <ul class="tree" style="font-size:10pt;line-height:1.8">
+        <li><svg class="ic ic-folder"><use href="#i-folder"/></svg>{{OUTER}}
+          <ul><li><span class="target"><svg class="ic ic-folder"><use href="#i-folder"/></svg>{{INNER}}</span>
+            <ul>
+              <li><svg class="ic ic-file"><use href="#i-file"/></svg>index.html</li>
+              <li><svg class="ic ic-file"><use href="#i-file"/></svg>style.css<span class="mark">← バラバラ</span></li>
+              <li><svg class="ic ic-file"><use href="#i-file"/></svg>photo1.jpg</li>
+            </ul></li></ul></li>
+      </ul>
+      <p class="xs mb0">フォルダに入っていたファイルを外に出してしまった。デザイン崩れ・画像が出ない原因になります。</p>
+    </div>
+  </div>
+  <p class="xs mt2">※「{{INNER}}」の部分には、実際の公開フォルダ名が入ります。{{INNERNOTE}}</p>
+</section>

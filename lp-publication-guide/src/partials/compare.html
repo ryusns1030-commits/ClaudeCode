@@ -1,0 +1,37 @@
+<section class="page" id="p-compare">
+  <h1 class="title">一番大事！ アップロード先は会社で「逆」</h1>
+  <p class="lead">ConoHa WING とエックスサーバーでは、<b>public_html と ドメイン名フォルダ の順番が逆</b>です。他社の説明を見ながら作業すると間違えやすいので注意しましょう。</p>
+
+  <div class="cols">
+    <div class="box {{CONOHA_CLASS}}" style="border-width:2.5px">
+      <h3 class="sub mt0" style="font-size:15pt">ConoHa WING</h3>
+      <p class="center" style="font-size:12.5pt;font-weight:900;color:var(--navy);margin:2mm 0 3mm;white-space:nowrap"><code>public_html</code> → <code>ドメイン名</code></p>
+      <ul class="tree">
+        <li><svg class="ic ic-folder"><use href="#i-folder"/></svg><b>public_html</b> <span class="small">①先に開く</span>
+          <ul><li><span class="target"><svg class="ic ic-folder"><use href="#i-folder"/></svg>example.jp</span> <span class="small">②この中へ</span>
+            <ul><li><svg class="ic ic-file"><use href="#i-file"/></svg>index.html など</li></ul></li></ul></li>
+      </ul>
+      <p class="small mt2 mb0">公式FAQ：public_html 配下にある各ドメイン名のディレクトリへアップロード</p>
+    </div>
+    <div class="box {{XSERVER_CLASS}}" style="border-width:2.5px">
+      <h3 class="sub mt0" style="font-size:15pt">エックスサーバー</h3>
+      <p class="center" style="font-size:12.5pt;font-weight:900;color:var(--navy);margin:2mm 0 3mm;white-space:nowrap"><code>ドメイン名</code> → <code>public_html</code></p>
+      <ul class="tree">
+        <li><svg class="ic ic-folder"><use href="#i-folder"/></svg><b>example.jp</b> <span class="small">①先に開く</span>
+          <ul><li><span class="target"><svg class="ic ic-folder"><use href="#i-folder"/></svg>public_html</span> <span class="small">②この中へ</span>
+            <ul><li><svg class="ic ic-file"><use href="#i-file"/></svg>index.html など</li></ul></li></ul></li>
+      </ul>
+      <p class="small mt2 mb0">公式FAQ：ドメイン名のフォルダ内の public_html にアップロード</p>
+    </div>
+  </div>
+
+  <div class="box help mt4">
+    <h4>このガイドは「{{SERVER}}」用です</h4>
+    <p class="mb0">あなたが使うのは <b style="font-size:14pt">{{DESTPATH}}</b> です。<br><span class="small">「example.jp」は説明用の例です。実際にはご自身のドメイン名（例：konkatsu-xxxx.jp）のフォルダを開きます。</span></p>
+  </div>
+
+  <div class="box warn">
+    <h4>サーバーが最初から作っているフォルダは消さないでください</h4>
+    <p class="small mb0">{{KEEPNOTE}}</p>
+  </div>
+</section>

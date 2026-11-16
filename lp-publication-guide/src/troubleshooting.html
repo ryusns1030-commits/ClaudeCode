@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>ホームページが表示されないときの確認ガイド</title>
+<meta name="foot-title" content="ホームページが表示されないときの確認ガイド（ConoHa WING／エックスサーバー共通）">
+<meta name="guide-vars" content='{"DATE":"2026年11月16日"}'>
+<link rel="stylesheet" href="common.css">
+<style>
+  .tcard .row .v { font-size: 10pt; line-height:1.5; padding:1.5mm 3mm; }
+  .tcard .row { grid-template-columns: 27mm 1fr; }
+  .tcard .row .k { font-size: 9pt; padding:1.5mm 2.5mm; }
+  .tcard { margin-bottom: 3mm; }
+  .tcard .th { padding: 1.5mm 4mm; }
+  .srv { display:inline-block; font-size:8.5pt; font-weight:700; border-radius:1mm; padding:0 1.5mm; margin-right:1mm; color:#fff; vertical-align: 1px; }
+  .srv.c { background: var(--teal-dark); } .srv.x { background: var(--navy-2); }
+  .toc td { font-size: 11pt; }
+</style>
+</head>
+<body>
+<!--#include defs.svg-->
+
+<!-- ===== 1 表紙・使い方 ===== -->
+<section class="page cover">
+  <div class="band" style="padding-top:16mm;padding-bottom:12mm">
+    <div class="kicker">LP公開ガイド 別冊（ConoHa WING／エックスサーバー共通）</div>
+    <h1 style="font-size:26pt">ホームページが<br>表示されないときの確認ガイド</h1>
+  </div>
+  <div class="inner" style="padding-top:13mm">
+    <h2 class="sec mt0">こんなときに開いてください</h2>
+    <table class="t toc">
+      <tr><th style="width:10mm">No.</th><th>こんな状態</th><th style="width:20mm">ページ</th></tr>
+      <tr style="line-height:1.35"><td>1</td><td>ホームページが表示されない</td><td><span class="pref" data-ref="t1"></span></td></tr>
+      <tr style="line-height:1.35"><td>2</td><td>「404」と表示される</td><td><span class="pref" data-ref="t2"></span></td></tr>
+      <tr style="line-height:1.35"><td>3</td><td>「403」と表示される</td><td><span class="pref" data-ref="t3"></span></td></tr>
+      <tr style="line-height:1.35"><td>4</td><td>画像が表示されない</td><td><span class="pref" data-ref="t4"></span></td></tr>
+      <tr style="line-height:1.35"><td>5</td><td>デザインが崩れる</td><td><span class="pref" data-ref="t5"></span></td></tr>
+      <tr style="line-height:1.35"><td>6</td><td>ボタンを押しても反応しない</td><td><span class="pref" data-ref="t6"></span></td></tr>
+      <tr style="line-height:1.35"><td>7</td><td>HTTPS（https://）で開けない</td><td><span class="pref" data-ref="t7"></span></td></tr>
+      <tr style="line-height:1.35"><td>8</td><td>ファイルをアップロードできない</td><td><span class="pref" data-ref="t8"></span></td></tr>
+      <tr style="line-height:1.35"><td>9</td><td>以前のページが表示される</td><td><span class="pref" data-ref="t9"></span></td></tr>
+      <tr style="line-height:1.35"><td>10</td><td>どのフォルダにアップロードするか分からない</td><td><span class="pref" data-ref="t10"></span></td></tr>
+    </table>
+    <div class="box stop mt4">
+      <h4>確認するときの4つのお約束</h4>
+      <ul class="small">
+        <li><b>もともとサーバーにあるファイル・フォルダは、削除・上書き・移動しない。</b></li>
+        <li><b>サーバーの設定（パーミッション、.htaccess、ネームサーバー、ドメイン設定の削除など）は自分で変えない。</b>必要なときは公式サポートへ。</li>
+        <li>SSLなどの設定を<b>何度もオン・オフしない</b>（ConoHa WINGでは一定期間申請が制限されることがあります）。</li>
+        <li><b>パスワードは誰にも送らない。</b></li>
+      </ul>
+    </div>
+    <p class="xs">表示：<span class="srv c">ConoHa</span>＝ConoHa WINGの場合　<span class="srv x">Xserver</span>＝エックスサーバーの場合　／　公式情報の調査日：2026年11月16日</p>
+  </div>
+</section>
+
+<!-- ===== 2 トラブル1-3 ===== -->
+<section class="page">
+  <div class="tcard" id="t1">
+    <div class="th"><span class="n">1</span>ホームページが表示されない</div>
+    <div class="row"><div class="k">こんな状態に<br>なったら</div><div class="v">真っ白／「このサイトにアクセスできません」／サーバー会社の初期ページが出る</div></div>
+    <div class="row"><div class="k">まず確認<br>すること</div><div class="v"><ul>
+      <li>URLの綴りが正しいか。<code>https://ドメイン名/</code> の形で入力したか。</li>
+      <li><span class="srv x">Xserver</span>「このWEBスペースへは、まだホームページがアップロードされていません。」と出る → 公開フォルダ（<code>ドメイン名/public_html</code>）にLPが入っていない状態です（公式FAQ）。<b>No.10</b> へ。</li>
+    </ul></div></div>
+    <div class="row"><div class="k">次に<br>試すこと</div><div class="v"><ul>
+      <li>index.html が公開フォルダの<b>すぐ下</b>にあるか確認（本編「正しい例・間違った例」）。</li>
+      <li>ドメインの設定・変更直後は、時間をおいて再確認（<span class="srv x">Xserver</span>反映に最大24時間程度／<span class="srv c">ConoHa</span>ネームサーバー変更は最大24〜72時間＝各公式）。</li>
+    </ul></div></div>
+    <div class="row last"><div class="k">解決しな<br>ければ</div><div class="v">サーバーやドメインの契約が切れていないか、契約先からのメールを確認。分からなければ契約先の公式サポートへ。</div></div>
+  </div>
+
+  <div class="tcard" id="t2">
+    <div class="th"><span class="n">2</span>「404」「Not Found」と表示される</div>
+    <div class="row"><div class="k">こんな状態に<br>なったら</div><div class="v">「404 Not Found」など、ページが見つからないという表示が出る</div></div>
+    <div class="row"><div class="k">まず確認<br>すること</div><div class="v"><ul>
+      <li>URLに誤りがないか（余計な文字、<code>/lp/</code> などが付いていないか）。</li>
+      <li>ファイル名が<b>半角小文字の</b> <code>index.html</code> か（<code>Index.html</code>・<code>index.html.html</code> などになっていないか）。</li>
+    </ul></div></div>
+    <div class="row"><div class="k">次に<br>試すこと</div><div class="v"><ul>
+      <li>ファイルがアップロードされているか、ファイルマネージャーで確認。</li>
+      <li><span class="srv x">Xserver</span>公式FAQでは「ネームサーバーが設定されていない」ことも原因に挙げられています。ドメインを他社で取った場合は設定状況を確認。</li>
+    </ul></div></div>
+    <div class="row last"><div class="k">解決しな<br>ければ</div><div class="v">ネームサーバーの変更は今のメール等に影響することがあるため、自分で触らず公式サポートか公開代行へ。</div></div>
+  </div>
+
+  <div class="tcard" id="t3">
+    <div class="th"><span class="n">3</span>「403」「Forbidden」と表示される</div>
+    <div class="row"><div class="k">こんな状態に<br>なったら</div><div class="v">「403 Forbidden」など、アクセスが禁止されているという表示が出る</div></div>
+    <div class="row"><div class="k">まず確認<br>すること</div><div class="v"><ul>
+      <li>公開フォルダに <b>index.html</b> があるか。<span class="srv x">Xserver</span>公式FAQでは、index.html などが無い場合に403になると案内されています。</li>
+      <li>lpフォルダごと入れて、index.html が1段深くなっていないか。</li>
+    </ul></div></div>
+    <div class="row"><div class="k">次に<br>試すこと</div><div class="v">サーバーの利用期限が切れていないか（<span class="srv x">Xserver</span>期限切れ等で凍結されると403になることがあります＝公式FAQ）。契約先からのメールを確認。</div></div>
+    <div class="row last"><div class="k">解決しな<br>ければ</div><div class="v">パーミッション・.htaccess・アクセス制限・WAFなどの設定が原因のこともありますが、<b>自分で変更せず</b>公式サポートへご相談ください。</div></div>
+  </div>
+</section>
+
+<!-- ===== 3 トラブル4-6 ===== -->
+<section class="page">
+  <div class="tcard" id="t4">
+    <div class="th"><span class="n">4</span>画像が表示されない</div>
+    <div class="row"><div class="k">こんな状態に<br>なったら</div><div class="v">写真の場所が空白、×印、または代わりの文字が出る</div></div>
+    <div class="row"><div class="k">まず確認<br>すること</div><div class="v"><ul>
+      <li><b>images</b>（納品時のフォルダ名）フォルダが公開フォルダの中にあり、<b>中に写真が入っている</b>か。</li>
+      <li>写真をフォルダから出してバラバラに置いていないか（本編「間違った例②」）。</li>
+    </ul></div></div>
+    <div class="row"><div class="k">次に<br>試すこと</div><div class="v">フォルダ名・ファイル名を<b>自分で変更していないか</b>、納品データと見比べる。<b>大文字・小文字の違い</b>（例：Photo.JPG と photo.jpg）でも表示されないことがあります。違っていたら、納品データのとおりにアップロードし直します。</div></div>
+    <div class="row last"><div class="k">解決しな<br>ければ</div><div class="v">HTML内の画像の指定（パス）の問題の可能性があります（<span class="srv x">Xserver</span>公式FAQ）。表示されない写真の場所をスクリーンショットして制作者へ。</div></div>
+  </div>
+
+  <div class="tcard" id="t5">
+    <div class="th"><span class="n">5</span>デザインが崩れる</div>
+    <div class="row"><div class="k">こんな状態に<br>なったら</div><div class="v">色がつかない、文字が左に寄って並ぶ、レイアウトがバラバラ</div></div>
+    <div class="row"><div class="k">まず確認<br>すること</div><div class="v"><b>css</b> フォルダが公開フォルダの中にあり、<b>中にファイルが入っている</b>か。css の中身だけを外に出していないか。</div></div>
+    <div class="row"><div class="k">次に<br>試すこと</div><div class="v">Ctrl＋F5（Mac：command＋shift＋R）で再読み込み。サーバー側の一時保存（キャッシュ）が残っていることもあるため、No.9 の方法も試します。</div></div>
+    <div class="row last"><div class="k">解決しな<br>ければ</div><div class="v">崩れている画面のスクリーンショット（パソコン・スマホ）と公開URLを制作者へ送ってください。</div></div>
+  </div>
+
+  <div class="tcard" id="t6">
+    <div class="th"><span class="n">6</span>ボタンを押しても反応しない</div>
+    <div class="row"><div class="k">こんな状態に<br>なったら</div><div class="v">LINE・電話・予約などのボタンを押しても何も起きない／違う相手が開く</div></div>
+    <div class="row"><div class="k">まず確認<br>すること</div><div class="v"><ul>
+      <li><b>js</b> フォルダが公開フォルダの中にあり、中にファイルが入っているか。</li>
+      <li>電話・LINEボタンは<b>スマートフォン</b>で試す（パソコンでは動きが異なる場合があります）。</li>
+    </ul></div></div>
+    <div class="row"><div class="k">次に<br>試すこと</div><div class="v">再読み込み（Ctrl＋F5）。スマホはブラウザのタブを閉じて開き直す。LINEアプリが入っているか確認。</div></div>
+    <div class="row last"><div class="k">解決しな<br>ければ</div><div class="v">違うアカウント・番号が開く場合は、LP内のリンク先の問題です。<b>サーバー設定では直りません</b>。どのボタンで何が起きたかを制作者へ。</div></div>
+  </div>
+</section>
+
+<!-- ===== 4 トラブル7-8 ===== -->
+<section class="page">
+  <div class="tcard" id="t7">
+    <div class="th"><span class="n">7</span>HTTPS（https://）で開けない</div>
+    <div class="row"><div class="k">こんな状態に<br>なったら</div><div class="v"><code>http://</code> では開けるが <code>https://</code> ではエラー／「保護されていない通信」などと表示される</div></div>
+    <div class="row"><div class="k">まず確認<br>すること</div><div class="v"><ul>
+      <li>無料SSLがオンか。<span class="srv c">ConoHa</span><span class="ui">サイト管理</span>→<span class="ui">サイトセキュリティ</span>→<span class="ui">SSL</span>→<span class="ui">無料独自SSL</span>の利用設定。<span class="srv x">Xserver</span>サーバーパネル<span class="ui">SSL設定</span>で「ON」か。</li>
+      <li>設定した直後ではないか。<span class="srv x">Xserver</span>反映まで最大1時間程度（公式）。</li>
+    </ul></div></div>
+    <div class="row"><div class="k">次に<br>試すこと</div><div class="v"><ul>
+      <li><span class="srv c">ConoHa</span>無料独自SSLには、ドメインのネームサーバーがConoHaに設定されていることが必要です（公式）。</li>
+      <li><span class="srv x">Xserver</span>SSL設定だけでは http→https に<b>自動では切り替わりません</b>（公式）。<code>https://</code> 付きのURLで開ければ正常です。</li>
+    </ul></div></div>
+    <div class="row last"><div class="k">解決しな<br>ければ</div><div class="v">設定を<b>何度もやり直さず</b>、時間をおいて確認。それでもだめなら公式サポートへ。.htaccess での転送設定は自分で追加しないでください。</div></div>
+  </div>
+
+  <div class="tcard" id="t8">
+    <div class="th"><span class="n">8</span>ファイルをアップロードできない</div>
+    <div class="row"><div class="k">こんな状態に<br>なったら</div><div class="v">ボタンを押しても送れない、エラーが出る、途中で止まる</div></div>
+    <div class="row"><div class="k">まず確認<br>すること</div><div class="v"><ul>
+      <li>ログインが切れていないか。いったんファイルマネージャーを閉じて、もう一度ログインして開く。</li>
+      <li>送ろうとしている場所が、公開フォルダ（No.10）になっているか。</li>
+    </ul></div></div>
+    <div class="row"><div class="k">次に<br>試すこと</div><div class="v"><ul>
+      <li>ファイルを<b>少しずつ</b>（1フォルダずつ）送る。別のブラウザ（Chrome・Edge）でも試す。</li>
+      <li><span class="srv x">Xserver</span>ログイン時の認証は、広告ブロッカー・VPN・古いブラウザ・JavaScript無効などで失敗することがあります（公式マニュアル）。</li>
+    </ul></div></div>
+    <div class="row last"><div class="k">解決しな<br>ければ</div><div class="v">表示されたエラーの文章をそのままメモ（またはスクリーンショット）して、公式サポートか公開代行へ。</div></div>
+  </div>
+</section>
+
+<!-- ===== 5 トラブル9-10 ===== -->
+<section class="page">
+  <div class="tcard" id="t9">
+    <div class="th"><span class="n">9</span>以前のページが表示される</div>
+    <div class="row"><div class="k">こんな状態に<br>なったら</div><div class="v">新しいLPを入れたのに、古いページや初期ページのまま変わらない</div></div>
+    <div class="row"><div class="k">まず確認<br>すること</div><div class="v">ブラウザの一時保存（キャッシュ）が原因のことがあります。Ctrl＋F5（Mac：command＋shift＋R）で再読み込み。スマホは別のブラウザやシークレット（プライベート）モードで開いてみる。<span class="srv x">Xserver</span>公式FAQでもブラウザのキャッシュ削除が案内されています。</div></div>
+    <div class="row"><div class="k">次に<br>試すこと</div><div class="v"><ul>
+      <li><span class="srv c">ConoHa</span>コンテンツキャッシュは初期設定で「ON」です。<span class="ui">サイト管理</span>→<span class="ui">高速化</span>→ タブ<span class="ui">キャッシュ</span>→<span class="ui">コンテンツキャッシュ</span>の「キャッシュクリア」で<span class="ui">クリア</span>を押すと、一時保存が破棄されます（公式ガイド）。<b>キャッシュの利用設定そのものは変えなくて大丈夫です。</b></li>
+      <li><span class="srv x">Xserver</span>サーバーキャッシュ設定がONの場合、ファイルは1〜2分間キャッシュされます（公式マニュアル）。数分待って再確認。</li>
+    </ul></div></div>
+    <div class="row last"><div class="k">解決しな<br>ければ</div><div class="v">本当に新しいファイルが入ったか、ファイルマネージャーで日時などを確認。index.html が別の場所に入っていないかも確認（No.10）。</div></div>
+  </div>
+
+  <div class="tcard" id="t10">
+    <div class="th"><span class="n">10</span>どのフォルダにアップロードするか分からない</div>
+    <div class="row"><div class="k">こんな状態に<br>なったら</div><div class="v">public_html やドメイン名のフォルダがたくさんあって、どこに入れればよいか分からない</div></div>
+    <div class="row"><div class="k">まず確認<br>すること</div><div class="v">
+      <div class="cols" style="gap:3mm">
+        <div class="box ok mt0" style="padding:2mm 3mm"><b><span class="srv c">ConoHa</span>ConoHa WING</b><br><code>public_html</code> → <code>ドメイン名</code> の中</div>
+        <div class="box ok mt0" style="padding:2mm 3mm"><b><span class="srv x">Xserver</span>エックスサーバー</b><br><code>ドメイン名</code> → <code>public_html</code> の中</div>
+      </div>
+      <span class="small">順番が<b>逆</b>なので注意（各社公式FAQ）。</span></div></div>
+    <div class="row"><div class="k">次に<br>試すこと</div><div class="v">ドメインが複数ある場合は、<b>公開URLのドメインと同じ名前</b>のフォルダを選びます。例：<code>https://konkatsu-xxxx.jp/</code> で公開 → <code>konkatsu-xxxx.jp</code> のフォルダ。</div></div>
+    <div class="row last"><div class="k">解決しな<br>ければ</div><div class="v">分からないまま入れると、今のホームページを上書きしてしまうおそれがあります。<b>作業を止めて</b>、公式サポートか公開代行にご相談ください。</div></div>
+  </div>
+</section>
+
+<!-- ===== 6 相談のしかた ===== -->
+<section class="page" id="t-support">
+  <h1 class="title">相談するときは</h1>
+  <p class="lead">次の情報をそろえて相談すると、早く解決しやすくなります。</p>
+  <div class="cols">
+    <div class="box help mt0">
+      <h4>伝える情報</h4>
+      <ul class="small">
+        <li>契約しているサーバー（ConoHa WING／エックスサーバー）</li>
+        <li>公開したいURL（例：https://example.jp/）</li>
+        <li>いつ・何をしたら・どうなったか</li>
+        <li>表示されたエラーの文章、画面のスクリーンショット</li>
+        <li>このガイドの何番まで試したか</li>
+      </ul>
+    </div>
+    <div class="box stop mt0">
+      <h4>送ってはいけない情報</h4>
+      <ul class="small">
+        <li>ログインパスワード、FTPパスワード</li>
+        <li>クレジットカード番号</li>
+        <li>SMSなどで届いた認証コード</li>
+      </ul>
+      <p class="xs mb0">スクリーンショットにパスワードなどが写っていないかも確認してください。</p>
+    </div>
+  </div>
+
+  <h2 class="sec">公式サポート・マニュアル</h2>
+  <table class="t">
+    <tr><th style="width:30%">ConoHa WING</th><td>サポート：<a href="https://support.conoha.jp/wing/">https://support.conoha.jp/wing/</a><br>よくある質問：<a href="https://support.conoha.jp/wing/faq/">https://support.conoha.jp/wing/faq/</a></td></tr>
+    <tr><th>エックスサーバー</th><td>サポート：<a href="https://www.xserver.ne.jp/support/">https://www.xserver.ne.jp/support/</a><br>トラブルのよくある質問：<a href="https://www.xserver.ne.jp/support/faq/faq_service_hp_trouble.php">https://www.xserver.ne.jp/support/faq/faq_service_hp_trouble.php</a></td></tr>
+  </table>
+
+  <div class="paid mt4">
+    <h4>ご自身での公開が難しい場合は、公開代行も承っています。</h4>
+    <table>
+      <tr style="line-height:1.35"><td>既存サーバーへのアップロード</td><td class="r">3,300円（税込）</td></tr>
+      <tr style="line-height:1.35"><td>新規サーバー契約後の初期設定・公開</td><td class="r">8,800円（税込）</td></tr>
+      <tr style="line-height:1.35"><td>特殊なサーバー環境</td><td class="r">別途お見積もり</td></tr>
+    </table>
+    <p class="xs mt2 mb0">サーバー・ドメインの契約および利用料金はお客様のご負担となります。</p>
+  </div>
+
+  <h2 class="sec">参照した公式情報（調査日：2026年11月16日）</h2>
+  <p class="xs" style="line-height:1.7">
+    エックスサーバー よくある質問「トラブル」各項目（初期ページ／403／404／画像／無効なURL）：<a href="https://www.xserver.ne.jp/support/faq/faq_service_hp_trouble.php">faq_service_hp_trouble.php</a>／
+    マニュアル「無料独自SSL設定」<a href="https://www.xserver.ne.jp/manual/man_server_ssl.php">man_server_ssl.php</a>・「ドメイン設定」<a href="https://www.xserver.ne.jp/manual/man_domain_setting.php">man_domain_setting.php</a>・「ファイルマネージャ」<a href="https://www.xserver.ne.jp/manual/man_tool_file.php">man_tool_file.php</a>・「サーバーキャッシュ設定」<a href="https://www.xserver.ne.jp/manual/man_server_cache.php">man_server_cache.php</a><br>
+    ConoHa WING ガイド「無料独自SSLを設定する」<a href="https://support.conoha.jp/w/letsencrypt/">w/letsencrypt/</a>・「コンテンツキャッシュ機能を使う」<a href="https://support.conoha.jp/w/contentscache/">w/contentscache/</a>・「ドメインにネームサーバーを設定する」<a href="https://support.conoha.jp/w/domainnameserver/">w/domainnameserver/</a>・FAQ「FTP/SSH」<a href="https://support.conoha.jp/wing/faq/ftpssh-q/">wing/faq/ftpssh-q/</a>
+  </p>
+  <p class="xs">本書は各社が作成した公式資料ではありません。画面や仕様が変わった場合は、公式情報を優先してください。</p>
+</section>
+</body>
+</html>

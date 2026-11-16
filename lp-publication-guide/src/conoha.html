@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>はじめてでもできる！LP公開ガイド｜ConoHa WING編</title>
+<meta name="foot-title" content="はじめてでもできる！LP公開ガイド｜ConoHa WING編">
+<meta name="guide-vars" content='{"SERVER":"ConoHa WING","DATE":"2026年11月16日","OUTER":"public_html","INNER":"ドメイン名","INNERNOTE":"ConoHa WINGでは「public_html」の中にある、公開したいドメイン名のフォルダです。","DESTPATH":"public_html → ドメイン名 のフォルダ","KEEPNOTE":"ConoHa WINGの公式FAQでは、サーバー作成時に自動で作られたディレクトリ（フォルダ）は「重要なデータが含まれているので削除しない」よう案内されています。見覚えのないフォルダやファイルがあっても、削除・移動・名前の変更はしないでください。","CONOHA_CLASS":"ok","XSERVER_CLASS":"help","ZIPSTEP":"10","ZIPNOTE":"ConoHa WINGのファイルマネージャーの公式ガイドには、ZIPをサーバー上で解凍する手順は掲載されていません（調査日時点）。必ずパソコンで解凍してから送ってください。","CHECKBADGE":"<small>最後に</small>CHECK","SUPPORTURL":"https://support.conoha.jp/wing/","SRCFILE":"sources-conoha.html"}'>
+<link rel="stylesheet" href="common.css">
+</head>
+<body>
+<!--#include defs.svg-->
+
+<!-- ===== 1 表紙 ===== -->
+<section class="page cover">
+  <div class="band">
+    <div class="kicker">結婚相談所LPテンプレート ご購入者さま特典</div>
+    <h1>はじめてでもできる！<br>LP公開ガイド</h1>
+    <span class="server">ConoHa WING 編</span>
+  </div>
+  <div class="inner">
+    <p style="font-size:14pt;line-height:1.9">このガイドは、<b>ホームページづくりが初めての方</b>が、納品されたLP（ホームページ）を<b>ConoHa WING（コノハウイング）</b>で公開するまでを、1ページずつ順番に説明する操作マニュアルです。</p>
+    <div class="cols mt4">
+      <div class="box ok mt0"><h4>このガイドでできること</h4><ul class="small"><li>サーバー・ドメインの確認</li><li>無料SSL（https）の確認</li><li>LPファイルのアップロード</li><li>パソコン・スマホでの表示確認</li></ul></div>
+      <div class="box help mt0"><h4>ご用意いただくもの</h4><ul class="small"><li>パソコン（Windows または Mac）</li><li>納品されたLPのファイル（ZIP）</li><li>ConoHaのログイン情報</li><li>スマートフォン（表示確認用）</li></ul></div>
+    </div>
+    <div class="meta mt4">
+      <b>公式情報の調査日：</b>2026年11月16日（ConoHa WING公式サポートサイトを確認）<br>
+      <b>本書の画面図：</b>すべて「説明用イメージ」です。実際の画面とは見た目が異なります。<br>
+      <b>表記：</b>画面に表示される名前は <span class="ui">このような枠</span> で示しています。
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2 全体マップ ===== -->
+<section class="page" id="p-map">
+  <h1 class="title">作業の全体マップ</h1>
+  <p class="lead">全部で15のSTEPがあります。<b>1回で全部やらなくても大丈夫</b>。終わったSTEPに印をつけながら進めましょう。</p>
+
+  <h2 class="sec mt0">準備する</h2>
+  <div class="flow">
+    <div class="f"><span class="pg"><span class="pref" data-ref="p-step1"></span></span><b>STEP 1</b>公式サイトを開く</div>
+    <div class="f"><span class="pg"><span class="pref" data-ref="p-step1"></span></span><b>STEP 2</b>契約済みか確認</div>
+    <div class="f"><span class="pg"><span class="pref" data-ref="p-step3"></span></span><b>STEP 3</b>ドメインを確認</div>
+    <div class="f"><span class="pg"><span class="pref" data-ref="p-step4"></span></span><b>STEP 4</b>無料SSLを確認</div>
+  </div>
+  <h2 class="sec">ファイルマネージャーを開く</h2>
+  <div class="flow">
+    <div class="f"><span class="pg"><span class="pref" data-ref="p-step5"></span></span><b>STEP 5</b>ログイン</div>
+    <div class="f"><span class="pg"><span class="pref" data-ref="p-step5"></span></span><b>STEP 6</b>「WING」を開く</div>
+    <div class="f"><span class="pg"><span class="pref" data-ref="p-step7"></span></span><b>STEP 7</b>「サイト管理」を開く</div>
+    <div class="f"><span class="pg"><span class="pref" data-ref="p-step7"></span></span><b>STEP 8</b>「ファイルマネージャー」</div>
+    <div class="f"><span class="pg"><span class="pref" data-ref="p-dest"></span></span><b>STEP 9</b>公開先フォルダを開く</div>
+  </div>
+  <h2 class="sec">ファイルを入れる</h2>
+  <div class="flow">
+    <div class="f"><span class="pg"><span class="pref" data-ref="p-zip"></span></span><b>STEP 10</b>納品ファイルを確認</div>
+    <div class="f"><span class="pg"><span class="pref" data-ref="p-upload"></span></span><b>STEP 11</b>アップロード</div>
+    <div class="f"><span class="pg"><span class="pref" data-ref="p-after"></span></span><b>STEP 12</b>ファイル構成を確認</div>
+  </div>
+  <h2 class="sec">表示を確かめる</h2>
+  <div class="flow">
+    <div class="f"><span class="pg"><span class="pref" data-ref="p-view"></span></span><b>STEP 13</b>公開URLを開く</div>
+    <div class="f"><span class="pg"><span class="pref" data-ref="p-view"></span></span><b>STEP 14</b>スマホで確認</div>
+    <div class="f"><span class="pg"><span class="pref" data-ref="p-buttons"></span></span><b>STEP 15</b>ボタンを確認</div>
+    <div class="f"><span class="pg"><span class="pref" data-ref="p-checklist"></span></span><b>最後に</b>完了チェック</div>
+  </div>
+
+  <div class="box help mt4">
+    <h4>各STEPページの読み方</h4>
+    <div class="cols3 small">
+      <div><b class="teal">今からすること</b><br>このページの目的</div>
+      <div><span class="num">1</span><b>赤い番号</b><br>クリックする順番。画面図の赤枠と対応</div>
+      <div><b style="color:var(--ok)">✓ 成功のしるし</b><br>この表示になれば次へ</div>
+    </div>
+  </div>
+</section>
+
+<!--#include terms.html-->
+
+<!-- ===== 4 分岐 ===== -->
+<section class="page" id="p-branch">
+  <h1 class="title">あなたはどこから始めますか？</h1>
+  <div class="q-big">現在、サーバーとドメインを<br>持っていますか？</div>
+  <div class="branch">
+    <div class="b"><span class="k">A</span><span class="t">両方持っている</span>
+      <p class="small mt2 mb0">ConoHa WINGを契約済みで、使うドメインも決まっている。</p>
+      <div class="go">→ 公開手順へ <span class="p"><span class="pref" data-ref="p-step1"></span></span> から</div></div>
+    <div class="b"><span class="k">B</span><span class="t">両方持っていない</span>
+      <p class="small mt2 mb0">これから契約する。</p>
+      <div class="go">→ 契約前の注意 <span class="p"><span class="pref" data-ref="p-contract"></span></span> から</div></div>
+    <div class="b"><span class="k">C</span><span class="t">どちらかだけ持っている</span>
+      <p class="small mt2 mb0">例：ドメインだけ他社で持っている／サーバーだけある。</p>
+      <div class="go">→ 契約状況の確認 <span class="p"><span class="pref" data-ref="p-check"></span></span> へ</div></div>
+    <div class="b"><span class="k">D</span><span class="t">よく分からない</span>
+      <p class="small mt2 mb0">以前だれかに作ってもらった、契約したか覚えていない。</p>
+      <div class="go">→ 確認方法 <span class="p"><span class="pref" data-ref="p-check"></span></span> へ</div></div>
+  </div>
+  <div class="box warn mt4">
+    <h4>すでにホームページを公開している方へ</h4>
+    <p class="mb0">今のホームページと同じドメインにLPを入れると、<b>今のページが置き換わる</b>ことがあります。必ず <span class="pref" data-ref="p-dest"></span> の「STOP」を先に読んでください。</p>
+  </div>
+</section>
+
+<!--#include contract.html {"SERVER":"ConoHa WING"}-->
+
+<!-- ===== 6 確認方法 ===== -->
+<section class="page" id="p-check">
+  <h1 class="title">持っているか分からないときの確認方法</h1>
+  <p class="lead">次の3つを順番に確認します。<b>確認できるまで、新しい契約はしないでください。</b></p>
+
+  <ol class="clicks">
+    <li><b>メールを検索する</b><br><span class="small">ふだん使うメールで「ConoHa」「ドメイン」「サーバー」などの言葉を検索します。契約や更新のお知らせが見つかれば、契約している可能性があります。どのメールアドレスで登録したかも控えましょう。</span></li>
+    <li><b>以前の制作会社・担当者に聞く</b><br><span class="small">ホームページを作ってもらったことがある場合、契約先（サーバー会社・ドメイン会社）と、契約者が誰かを確認します。</span></li>
+    <li><b>ConoHaのコントロールパネルにログインできるか試す</b><br><span class="small">ログインできたら、上部メニューの<span class="ui">WING</span>→<span class="ui">サーバー管理</span>→<span class="ui">契約情報</span>→<span class="ui">サーバー情報</span>で、契約内容（<span class="ui">プラン</span>）を確認できます（公式ガイド「WINGパックの契約状況を確認する」より）。</span></li>
+  </ol>
+
+  <h2 class="sec">確認した結果、次に読むページ</h2>
+  <table class="t">
+    <tr><th style="width:44%">状況</th><th>次にすること</th></tr>
+    <tr><td>ConoHa WINGもドメインもある</td><td>公開手順 <span class="pref" data-ref="p-step1"></span> へ</td></tr>
+    <tr><td>ConoHa WINGはあるが、ドメインがない</td><td>ドメインの確認・追加 <span class="pref" data-ref="p-step3"></span> へ</td></tr>
+    <tr><td>ドメインだけ他社で持っている</td><td>ConoHa WINGの契約が必要です。<span class="pref" data-ref="p-step1"></span> の「まだ契約していない場合」へ。さらに、ドメインの<b>ネームサーバー</b>（住所の案内先）をConoHaに向ける設定が必要です（<span class="pref" data-ref="p-step3"></span>）。</td></tr>
+    <tr><td>どちらもない</td><td>契約前の注意 <span class="pref" data-ref="p-contract"></span> を読んでから <span class="pref" data-ref="p-step1"></span> へ</td></tr>
+    <tr><td>他社のサーバーで今もホームページを公開中</td><td>本書の手順だけで切り替えると、今のサイトに影響が出ることがあります。<b>作業を止めて</b>、契約先の公式サポートか公開代行にご相談ください。</td></tr>
+  </table>
+</section>
+
+<!-- ===== 7 STEP1-2 ===== -->
+<section class="page" id="p-step1">
+  <div class="step-head"><div class="step-badge"><small>STEP</small>1・2</div><h1 class="title">公式サイトを開き、契約を確認する</h1></div>
+  <div class="what">ConoHa WINGの公式サイトを開き、すでに契約しているかを確認します。</div>
+
+  <h2 class="sec mt0">STEP 1　公式サイトを開く</h2>
+  <ol class="clicks">
+    <li>ブラウザ（Chrome・Edgeなど）のアドレス欄に <code>https://www.conoha.jp/wing/</code> と入力します。</li>
+  </ol>
+  <div class="box warn"><h4>よく似た広告・偽サイトに注意</h4><p class="small mb0">検索結果の広告ではなく、アドレスが <code>conoha.jp</code> で終わることを確認してください。操作の説明は公式サポートサイト <code>support.conoha.jp</code> に載っています。</p></div>
+
+  <h2 class="sec">STEP 2　契約済みかを確認する</h2>
+  <ol class="clicks">
+    <li>コントロールパネルにログインします（ログインの方法は <span class="pref" data-ref="p-step5"></span>）。</li>
+    <li>上部メニューの<span class="ui">WING</span>→ 左メニューの<span class="ui">サーバー管理</span>→<span class="ui">契約情報</span>→<span class="ui">サーバー情報</span>を開き、<span class="ui">プラン</span>の項目を見ます。</li>
+  </ol>
+  <div class="box ok"><h4>成功のしるし</h4><p class="mb0">プランの項目に契約内容が表示されていれば、契約済みです。→ <span class="pref" data-ref="p-step3"></span> へ</p></div>
+
+  <div class="box help">
+    <h4>まだ契約していない場合（公式ガイドの流れ）</h4>
+    <p class="small">公式ガイド「ConoHa WING（WINGパック）お申し込み方法」によると、サービスページの<span class="ui">お申し込み</span>から、<b>料金タイプ → 契約期間 → プラン</b>を選び、お客様情報の入力・電話/SMS認証・お支払い方法の登録へ進みます。</p>
+    <ul class="small">
+      <li>申込の途中に表示される<b>AIツールやWordPressテーマなどの追加項目</b>は、このLPの公開には不要です。<b>「利用しない」</b>を選べる項目は、内容が分からなければ「利用しない」を選びましょう。</li>
+      <li>独自ドメインの綴りは<b>後から変更できない</b>場合があります。入力前に1文字ずつ確認してください。</li>
+      <li>申込後、ドメインの<b>情報認証メール</b>が届いたら必ず認証してください。認証しないとドメインの利用が制限されます（公式ガイドより）。</li>
+    </ul>
+  </div>
+  <p class="note-unverified">未確認事項：申込画面の細かい表示（WordPress関連の項目をどこで省略できるか等）は、公式ガイドに記載がないため本書では断定していません。申込時は必ず公式ガイド（<a href="https://support.conoha.jp/c/easysetup/">support.conoha.jp/c/easysetup/</a>）を見ながら進めてください。</p>
+</section>
+
+<!-- ===== 8 STEP3 ===== -->
+<section class="page" id="p-step3">
+  <div class="step-head"><div class="step-badge"><small>STEP</small>3</div><h1 class="title">ドメインが設定されているか確認する</h1></div>
+  <div class="what">LPを公開したいドメイン（住所）が、ConoHa WINGのサーバーに登録されているかを確認します。</div>
+
+  <div class="stack">
+    <div class="mock">
+      <div class="mock-top"><span class="hl">WING<i class="num tag">1</i></span><span>　</span><span>　</span></div>
+      <div class="mock-body">
+        <div class="mock-side"><div class="hl">サーバー管理<i class="num tag">2</i></div><div class="blank w80"></div><div class="blank w60"></div></div>
+        <div class="mock-main">
+          <div class="hl" style="display:inline-block;padding:.5mm 2mm;font-weight:700;color:var(--navy)">ドメイン<i class="num tag">3</i></div>
+          <div class="hl" style="margin-top:3mm;padding:1mm 2mm;background:#fffdf2"><b>example.jp</b><i class="num tag">4</i></div>
+          <div class="blank w60"></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <ol class="clicks">
+        <li>コントロールパネルにログインし、上部メニューの<span class="ui">WING</span>をクリック。</li>
+        <li>左メニューの<span class="ui">サーバー管理</span>をクリック。</li>
+        <li>サーバー管理メニューの<span class="ui">ドメイン</span>をクリック。</li>
+        <li>一覧に、公開したいドメイン名があるか見ます。</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="box ok"><h4>成功のしるし</h4><p class="mb0">公開したいドメイン名が一覧にあれば OK です。→ <span class="pref" data-ref="p-step4"></span> へ</p></div>
+
+  <div class="box help">
+    <h4>一覧にないときは（公式ガイド「サーバーにドメインの設定を追加する」）</h4>
+    <p class="small mb0">同じ画面の右上<span class="ui">+ドメイン</span>→<span class="ui">新規ドメインを追加</span>を選び、<span class="ui">ドメイン名</span>を入力。無料SSLは<span class="ui">利用する</span>を選んで<span class="ui">保存</span>します。</p>
+  </div>
+  <div class="box warn">
+    <h4>ドメインを他社で取得している場合</h4>
+    <p class="small mb0">ドメイン提供元で<b>ネームサーバー</b>をConoHaのものに変更する必要があります。反映には<b>最大24〜72時間</b>かかることがあります（ConoHa公式ガイドより）。ネームサーバーの変更は、今のメールやホームページにも影響することがあるため、<b>不安な場合はドメイン提供元・ConoHaの公式サポート、または公開代行にご相談ください</b>。</p>
+  </div>
+</section>
+
+<!-- ===== 9 STEP4 ===== -->
+<section class="page" id="p-step4">
+  <div class="step-head"><div class="step-badge"><small>STEP</small>4</div><h1 class="title">無料SSLが使える状態か確認する</h1></div>
+  <div class="what">ホームページを <code>https://</code> で安全に開けるようにする「無料独自SSL」が、オンになっているか確認します。</div>
+
+  <div class="stack">
+    <div class="mock">
+      <div class="mock-top"><span>WING</span><span>　</span></div>
+      <div class="mock-body">
+        <div class="mock-side"><div>サイト管理</div><div class="hl">サイトセキュリティ<i class="num tag">2</i></div><div class="blank w60"></div></div>
+        <div class="mock-main">
+          <span class="btn hl">SSL<i class="num tag">3</i></span><span class="btn" style="color:#aab">　　</span>
+          <div class="hl" style="margin-top:3mm;padding:1.5mm 2mm"><b>無料独自SSL</b><br><span class="small">利用設定：利用する</span><i class="num tag">4</i></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <ol class="clicks">
+        <li>上部メニューの<span class="ui">WING</span>→ 左メニューの<span class="ui">サイト管理</span>をクリック。</li>
+        <li>サイト管理画面の左メニューで<span class="ui">サイトセキュリティ</span>を開きます。</li>
+        <li>上のタブから<span class="ui">SSL</span>を開きます。</li>
+        <li><span class="ui">無料独自SSL</span>を開き、<span class="ui">利用設定</span>を見ます。</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="box ok"><h4>成功のしるし</h4><p class="mb0">利用設定が<b>「利用する」</b>になっていれば OK。→ <span class="pref" data-ref="p-step5"></span> へ<br><span class="small">「利用しない」のときは「利用する」に変更します（公式ガイド「無料独自SSLを設定する」より）。</span></p></div>
+
+  <div class="box warn">
+    <h4>知っておきたい注意点（公式ガイドより）</h4>
+    <ul class="small">
+      <li>無料独自SSLを使うには、ドメインのネームサーバーがConoHaに設定されている必要があります。</li>
+      <li>短期間に何度も設定し直すと、一定期間申請が制限されます。<b>オン・オフを繰り返さない</b>でください。</li>
+      <li>設定すると、自動的に <code>https://</code> のURLへ転送されます。ご自身で転送の設定（.htaccess など）を追加すると、エラーになることがあるため<b>追加しないでください</b>。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 10 STEP5-6 ===== -->
+<section class="page" id="p-step5">
+  <div class="step-head"><div class="step-badge"><small>STEP</small>5・6</div><h1 class="title">ログインして「WING」を開く</h1></div>
+  <div class="what">ここから、LPのファイルを入れる「ファイルマネージャー」まで進みます。まずはログインです。</div>
+
+  <h2 class="sec mt0">STEP 5　コントロールパネルにログイン</h2>
+  <ol class="clicks">
+    <li>ConoHa公式サイト（<code>https://www.conoha.jp/</code>）から、ConoHaの<b>コントロールパネル</b>にログインします。</li>
+    <li>登録した<b>メールアドレス</b>と<b>パスワード</b>を入力します。</li>
+  </ol>
+  <p class="note-unverified">未確認事項：ログイン画面のURL・ボタンの表示名は、調査時に公式サイトの該当ページを確認できなかったため記載していません。公式サイトの表示に従ってください。</p>
+
+  <h2 class="sec">STEP 6　上部メニューの「WING」をクリック</h2>
+  <div class="mock">
+    <div class="mock-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">ConoHa コントロールパネル</span></div>
+    <div class="mock-top"><span class="hl">WING<i class="num tag">1</i></span><span>　　</span><span>　　</span><span>　　</span></div>
+    <div class="mock-body"><div class="mock-side"><div class="blank w80"></div><div class="blank w60"></div><div class="blank w80"></div></div><div class="mock-main"><div class="blank w80"></div><div class="blank w60"></div><div class="blank w40"></div></div></div>
+  </div>
+  <div class="box ok"><h4>成功のしるし</h4><p class="mb0">左側に<span class="ui">サーバー管理</span><span class="ui">サイト管理</span>などのメニューが表示されたら OK。→ <span class="pref" data-ref="p-step7"></span> へ</p></div>
+  <div class="box help"><h4>うまくいかないとき</h4><p class="small mb0">パスワードを忘れた場合は、ログイン画面のパスワード再設定の案内に従ってください。ログインできない場合は、ConoHaの公式サポートへ。<b>パスワードを他人に送って代わりにログインしてもらうのはやめましょう。</b></p></div>
+</section>
+
+<!-- ===== 11 STEP7-8 ===== -->
+<section class="page" id="p-step7">
+  <div class="step-head"><div class="step-badge"><small>STEP</small>7・8</div><h1 class="title">「サイト管理」→「ファイルマネージャー」</h1></div>
+  <div class="what">LPのファイルを入れる画面「ファイルマネージャー」を開きます（公式ガイド「ファイルマネージャーを利用する」の手順です）。</div>
+
+  <div class="mock">
+    <div class="mock-top"><span>WING</span><span>　　</span><span>　　</span></div>
+    <div class="mock-body">
+      <div class="mock-side"><div>サーバー管理</div><div class="hl">サイト管理<i class="num tag">1</i></div><div class="blank w60"></div><div class="blank w80"></div></div>
+      <div class="mock-main">
+        <div style="display:flex;gap:3mm">
+          <div style="width:42mm;background:#f8fafc;border:1px solid #e1e7ef;border-radius:1.5mm;padding:1.5mm">
+            <div class="blank w60"></div>
+            <div class="hl" style="padding:1mm 2mm;font-weight:700;color:var(--navy);background:#fff">ファイルマネージャー<i class="num tag">2</i></div>
+            <div class="blank w80"></div><div class="blank w60"></div>
+          </div>
+          <div style="flex:1"><div class="blank w80"></div><div class="blank w60"></div><div class="blank w80"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ol class="clicks">
+    <li><b>STEP 7</b>　左メニューの<span class="ui">サイト管理</span>をクリックします。</li>
+    <li><b>STEP 8</b>　サイト管理メニューの<span class="ui">ファイルマネージャー</span>をクリックします。</li>
+  </ol>
+
+  <div class="box ok"><h4>成功のしるし</h4><p class="mb0">左側にフォルダの一覧（<code>public_html</code> など）が並んだ画面が表示されたら OK。→ <span class="pref" data-ref="p-compare"></span> へ</p></div>
+  <div class="box help">
+    <h4>ログイン画面が出たときは</h4>
+    <p class="small mb0">公式ガイドでは、コントロールパネルから開いた場合は、そのままファイルマネージャーの画面が表示されると案内されています。もしログイン画面が表示された場合は、<b>FTPアカウント</b>の<span class="ui">ユーザー名</span><span class="ui">パスワード</span>を入力して<span class="ui">ログイン</span>します。FTPアカウントは<span class="ui">サイト管理</span>→<span class="ui">FTP</span>で作成・確認できます（公式ガイド「FTPアカウントを作成する」）。</p>
+  </div>
+</section>
+
+<!--#include compare.html-->
+
+<!-- ===== 13 STEP9 ===== -->
+<section class="page" id="p-dest">
+  <div class="step-head"><div class="step-badge"><small>STEP</small>9</div><h1 class="title">公開先のフォルダを開く</h1></div>
+  <div class="what">ファイルマネージャーの左側で、<code>public_html</code> を開き、その中の<b>公開したいドメイン名のフォルダ</b>を開きます。</div>
+
+  <div class="cols-7-5 stack">
+    <div class="mock">
+      <div class="mock-body" style="min-height:52mm">
+        <div class="mock-side" style="width:80mm">
+          <ul class="tree" style="font-size:12pt;line-height:2.1">
+            <li class="dim"><svg class="ic ic-folder"><use href="#i-folder"/></svg>（ほかのフォルダ）</li>
+            <li><span class="hl" style="padding:0 1mm"><svg class="ic ic-folder"><use href="#i-folder"/></svg><b>public_html</b><i class="num tag">1</i></span>
+              <ul><li><span class="hl" style="padding:0 1mm;background:#fff3cd"><svg class="ic ic-folder"><use href="#i-folder"/></svg><b>example.jp</b><i class="num tag">2</i></span></li></ul></li>
+          </ul>
+        </div>
+        <div class="mock-main"><div class="small" style="color:#6b7889">右側：開いたフォルダの中身</div><div class="blank w80"></div><div class="blank w60"></div></div>
+      </div>
+    </div>
+    <div>
+      <ol class="clicks">
+        <li>左側の<span class="ui">public_html</span>をクリック。</li>
+        <li>公開したい<b>ドメイン名</b>のフォルダをクリック。</li>
+      </ol>
+      <div class="box ok mt0"><h4>成功のしるし</h4><p class="small mb0">ドメイン名のフォルダが選ばれ、右側にその中身が表示される。</p></div>
+    </div>
+  </div>
+
+  <div class="box stop">
+    <h4>ここで必ず確認：今のホームページはありませんか？</h4>
+    <p class="small">ドメイン名のフォルダに、すでに <code>index.html</code> などのファイルがある場合は、<b>アップロードする前に作業を止めて</b>、次を確認してください。</p>
+    <ul class="small">
+      <li>ブラウザで <code>https://ドメイン名/</code> を開き、<b>今のホームページが表示されるなら、既存サイトがあります</b>。このままLPを入れると、今のページが置き換わります。</li>
+      <li>既存サイトのファイルを<b>削除・上書き・移動しないでください</b>。公開先をどこにするか（別のドメインにするか等）を決めてから進めます。</li>
+      <li>判断に迷う場合は、<b>この先に進まず</b>、ConoHaの公式サポートか公開代行にご相談ください。</li>
+    </ul>
+    <p class="small mb0"><b>これまでホームページを公開したことがない新しいドメインで、URLを開いても自分のホームページが表示されない場合だけ</b>、次へ進んでください。</p>
+  </div>
+</section>
+
+<!--#include zip.html-->
+<!--#include structure.html-->
+
+<!-- ===== 16 STEP11 ===== -->
+<section class="page" id="p-upload">
+  <div class="step-head"><div class="step-badge"><small>STEP</small>11</div><h1 class="title">ファイル一式をアップロードする</h1></div>
+  <div class="what">STEP 9で開いた<b>ドメイン名のフォルダ</b>に、解凍したLPフォルダの<b>中身すべて</b>（index.html・css・js・images など）を入れます。</div>
+
+  <div class="mock">
+    <div class="mock-body" style="min-height:58mm">
+      <div class="mock-side" style="width:40mm">
+        <ul class="tree" style="font-size:9.5pt;line-height:2">
+          <li><svg class="ic ic-folder"><use href="#i-folder"/></svg>public_html
+            <ul><li><span style="background:#fff3cd;padding:0 1mm;font-weight:700"><svg class="ic ic-folder"><use href="#i-folder"/></svg>example.jp</span></li></ul></li>
+        </ul>
+      </div>
+      <div class="mock-main">
+        <span class="btn hl">ファイルアップロード<i class="num tag">1</i></span>
+        <div style="border:1px solid #c9d2de;border-radius:2mm;margin-top:3mm;padding:2.5mm;background:#fbfcfe">
+          <div class="dropzone" style="margin-top:0;padding:3mm">ここにドラッグ＆ドロップ</div>
+          <div style="margin-top:2mm"><span class="btn hl">ファイルを選択<i class="num tag">2</i></span> <span class="btn hl">フォルダを選択<i class="num tag">3</i></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ol class="clicks">
+    <li>上部メニューの<span class="ui">ファイルアップロード</span>ボタンをクリックします。</li>
+    <li>表示されたウィンドウで<span class="ui">ファイルを選択</span>をクリックし、パソコンの <b>index.html</b> を選びます。</li>
+    <li>もう一度<span class="ui">ファイルアップロード</span>を開き、<span class="ui">フォルダを選択</span>で <b>css</b> フォルダを選びます。<b>js・images</b> など残りのフォルダも、1つずつ同じように送ります。</li>
+  </ol>
+  <p class="small">別の方法：パソコンのフォルダから、index.html と各フォルダを右側の一覧へ<b>ドラッグ＆ドロップ</b>してもアップロードできます（公式ガイドより）。</p>
+
+  <div class="box ok"><h4>成功のしるし</h4><p class="mb0">右側の一覧に、送ったファイルやフォルダが表示されたら成功です（公式ガイドより）。→ <span class="pref" data-ref="p-after"></span> へ</p></div>
+  <div class="box warn">
+    <h4>同じ名前のファイルがあると表示されたら</h4>
+    <p class="small mb0">上書きしてよいか確認する表示が出た場合は、<b>すぐに進めず</b>キャンセルし、<span class="pref" data-ref="p-dest"></span> の「STOP」をもう一度確認してください。</p>
+  </div>
+</section>
+
+<!-- ===== 17 STEP12 ===== -->
+<section class="page" id="p-after">
+  <div class="step-head"><div class="step-badge"><small>STEP</small>12</div><h1 class="title">アップロード後のファイル構成を確認する</h1></div>
+  <div class="what">ドメイン名のフォルダの中身が、納品データと<b>同じ並び</b>になっているかを確かめます。</div>
+
+  <div class="cols">
+    <div class="cmp good">
+      <div class="label">この形ならOK</div>
+      <ul class="tree">
+        <li><svg class="ic ic-folder"><use href="#i-folder"/></svg>public_html
+          <ul><li><span class="target"><svg class="ic ic-folder"><use href="#i-folder"/></svg>ドメイン名</span>
+            <ul>
+              <li><svg class="ic ic-file"><use href="#i-file"/></svg><b>index.html</b></li>
+              <li><svg class="ic ic-folder"><use href="#i-folder"/></svg>css<span class="mark" style="color:var(--ok)">中にファイルあり</span></li>
+              <li><svg class="ic ic-folder"><use href="#i-folder"/></svg>js<span class="mark" style="color:var(--ok)">中にファイルあり</span></li>
+              <li><svg class="ic ic-folder"><use href="#i-folder"/></svg>images<span class="mark" style="color:var(--ok)">写真あり</span></li>
+            </ul></li></ul></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="sub mt0">確認する3つのポイント</h3>
+      <ol class="clicks">
+        <li><b>index.html</b> が、ドメイン名のフォルダのすぐ下にある。</li>
+        <li>css・js・images などの<b>フォルダ</b>があり、クリックすると<b>中にファイルが入っている</b>。</li>
+        <li>ファイルの数が、パソコンの納品フォルダと<b>同じ</b>。</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="box help mt4">
+    <h4>形が違ったときは</h4>
+    <ul class="small">
+      <li><b>lpフォルダの中に index.html が入っている</b>（1段深い）／<b>ファイルがバラバラ</b>：<span class="pref" data-ref="p-structure"></span> の「間違った例」です。</li>
+      <li>直し方：<b>あなたが今アップロードしたファイル・フォルダだけ</b>を右クリック→<span class="ui">削除</span>で消し（公式ガイド「ファイルを削除する」）、STEP 11 からやり直します。</li>
+      <li><b>もともと入っていたファイルや、見覚えのないファイルは削除しないでください。</b>どれを消せばよいか分からないときは、作業を止めてご相談ください。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 18 STEP13-14 ===== -->
+<section class="page" id="p-view">
+  <div class="step-head"><div class="step-badge"><small>STEP</small>13・14</div><h1 class="title">パソコンとスマホで表示を確認する</h1></div>
+  <div class="what">公開URLを開いて、LPが表示されるか確認します。</div>
+
+  <h2 class="sec mt0">STEP 13　公開URLを開く（パソコン）</h2>
+  <ol class="clicks">
+    <li>ブラウザのアドレス欄に <code>https://ドメイン名/</code>（例：<code>https://example.jp/</code>）と入力して開きます。</li>
+    <li>うまく表示されないときは、キーボードの<b>Ctrl＋F5</b>（Macは<b>command＋shift＋R</b>）で再読み込みします。</li>
+  </ol>
+  <div class="mock" style="max-width:150mm;margin-left:auto;margin-right:auto">
+    <div class="mock-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url hl"><svg class="ic" style="color:var(--ok);width:3.4mm;height:3.4mm"><use href="#i-lock"/></svg>https://example.jp/<i class="num tag">1</i></span></div>
+    <div style="padding:4mm 5mm 8mm"><div style="background:var(--teal-soft);border-radius:2mm;padding:4mm;text-align:center;font-weight:900;color:var(--navy)">あなたの結婚相談所のLP</div><div class="blank w80"></div><div class="blank w60"></div></div>
+  </div>
+  <div class="box ok"><h4>成功のしるし</h4><p class="mb0">LPのトップが表示され、アドレス欄にカギのマーク（またはそれに近い表示）が出ていれば OK。</p></div>
+
+  <h2 class="sec">STEP 14　スマートフォンで確認する</h2>
+  <ol class="clicks">
+    <li>スマートフォンのブラウザ（Safari・Chromeなど）で同じURLを開きます。</li>
+    <li>上から下までスクロールし、文字・写真・ボタンが<b>画面からはみ出していないか</b>確認します。</li>
+  </ol>
+  <div class="box help">
+    <h4>ドメインを追加・変更したばかりのとき</h4>
+    <p class="small mb0">ネームサーバーの変更が反映されるまで最大24〜72時間かかることがあります（ConoHa公式ガイド）。その間は、<span class="ui">サイト管理</span>→<span class="ui">サイト設定</span>→ タブ<span class="ui">基本設定</span>→<span class="ui">動作確認URL</span>の<span class="ui">利用設定</span>を<span class="ui">ON</span>にすると、表示されたURLで確認できます（公式ガイド「動作確認URLを使う」）。</p>
+  </div>
+</section>
+
+<!-- ===== 19 STEP15 ===== -->
+<section class="page" id="p-buttons">
+  <div class="step-head"><div class="step-badge"><small>STEP</small>15</div><h1 class="title">LINEなどのボタンが動くか確認する</h1></div>
+  <div class="what">LPの「LINEで相談」「電話する」「無料相談を予約」などのボタンを、<b>スマートフォンで1つずつ</b>押して確認します。</div>
+
+  <table class="t">
+    <tr><th style="width:30%">ボタンの種類</th><th style="width:38%">押したときの正しい動き</th><th>確認するところ</th></tr>
+    <tr><td><b>LINEボタン</b></td><td>LINEアプリ（または友だち追加の画面）が開く</td><td>表示された<b>アカウント名が自分の相談所</b>か</td></tr>
+    <tr><td><b>電話ボタン</b></td><td>電話の発信画面が開く</td><td><b>電話番号</b>が正しいか（発信はしなくてOK）</td></tr>
+    <tr><td><b>メール・フォーム</b></td><td>メールアプリや予約フォームが開く</td><td>宛先・フォームが<b>自分のもの</b>か</td></tr>
+    <tr><td><b>ページ内リンク</b><br><span class="xs">「料金を見る」など</span></td><td>同じページの該当箇所へ移動する</td><td>違う場所へ飛ばないか</td></tr>
+    <tr><td><b>SNS・地図</b></td><td>InstagramやGoogleマップが開く</td><td>自分のアカウント・住所か</td></tr>
+  </table>
+
+  <div class="box ok"><h4>成功のしるし</h4><p class="mb0">すべてのボタンで、<b>自分の相談所の</b>LINE・電話番号・フォームが開けば OK。→ <span class="pref" data-ref="p-checklist"></span> へ</p></div>
+  <div class="box help">
+    <h4>ボタンが反応しない・違う相手が開くとき</h4>
+    <ul class="small">
+      <li>押しても何も起きない：js フォルダがアップロードされているか <span class="pref" data-ref="p-after"></span> で確認します。</li>
+      <li>違うアカウントや番号が開く：LP内のリンク先の設定が原因です。<b>サーバーの設定では直りません</b>。制作者にご連絡ください。</li>
+      <li>くわしくは別冊「ホームページが表示されないときの確認ガイド」の「ボタンを押しても反応しない」をご覧ください。</li>
+    </ul>
+  </div>
+</section>
+
+<!--#include checklist.html-->
+<!--#include closing.html-->
+
+</body>
+</html>
